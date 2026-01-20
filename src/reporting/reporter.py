@@ -98,7 +98,7 @@ class WhatsAppReporter:
         notes = metadata.get('notes', '')
         date = datetime.now().strftime('%d-%m-%Y')
         
-        html = f"""<!DOCTYPE html>
+        html_content_str = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -221,7 +221,7 @@ class WhatsAppReporter:
 """
         
         for contact in contacts[:100]:  # Limit to first 100
-            html += f"""
+            html_content_str += f"""
             <tr>
                 <td>{html.escape(contact.jid)}</td>
                 <td>{html.escape(contact.display_name or 'N/A')}</td>
@@ -229,7 +229,7 @@ class WhatsAppReporter:
             </tr>
 """
         
-        html += """
+        html_content_str += """
         </table>
     </div>
     
@@ -238,34 +238,34 @@ class WhatsAppReporter:
 """
         
         for chat in chats[:20]:  # Limit to first 20 chats
-            html += f"""
+            html_content_str += f"""
         <h3>{html.escape(chat.display_name or chat.jid)}</h3>
         <p><strong>JID:</strong> {html.escape(chat.jid)}</p>
         <p><strong>Type:</strong> {'Group' if chat.is_group else 'Individual'}</p>
         <p><strong>Message Count:</strong> {chat.message_count}</p>
 """
             if chat.participants:
-                html += f"<p><strong>Participants:</strong> {', '.join(chat.participants[:10])}</p>"
+                html_content_str += f"<p><strong>Participants:</strong> {', '.join(chat.participants[:10])}</p>"
             
             if chat.last_message_timestamp:
                 last_msg_dt = datetime.fromtimestamp(chat.last_message_timestamp / 1000)
-                html += f"<p><strong>Last Message:</strong> {last_msg_dt.strftime('%Y-%m-%d %H:%M:%S')}</p>"
+                html_content_str += f"<p><strong>Last Message:</strong> {last_msg_dt.strftime('%Y-%m-%d %H:%M:%S')}</p>"
             
             # Show recent messages
             if chat.messages:
-                html += "<h4>Recent Messages</h4>"
+                html_content_str += "<h4>Recent Messages</h4>"
                 for msg in chat.messages[-10:]:  # Last 10 messages
                     msg_class = "message-from-me" if msg.from_me else "message-from-other"
                     msg_time = msg.get_datetime().strftime('%Y-%m-%d %H:%M:%S')
                     msg_text = html.escape(msg.message_text or '[Media]' if msg.media_type else '[No content]')
-                    html += f"""
+                    html_content_str += f"""
                     <div class="chat-message {msg_class}">
                         <div class="timestamp">{msg_time}</div>
                         <div>{msg_text}</div>
                     </div>
 """
         
-        html += """
+        html_content_str += """
     </div>
     
     <div class="section">
@@ -284,7 +284,7 @@ class WhatsAppReporter:
             call_time = call.get_datetime().strftime('%Y-%m-%d %H:%M:%S')
             direction = "Outgoing" if call.from_me else "Incoming"
             call_type = "Video" if call.video_call else "Audio"
-            html += f"""
+            html_content_str += f"""
             <tr>
                 <td>{call_time}</td>
                 <td>{html.escape(call.jid)}</td>
@@ -294,13 +294,13 @@ class WhatsAppReporter:
             </tr>
 """
         
-        html += """
+        html_content_str += """
         </table>
     </div>
 </body>
 </html>
 """
-        return html
+        return html_content_str
     
     def generate_json_report(
         self,

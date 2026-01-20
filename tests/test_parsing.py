@@ -142,6 +142,8 @@ class TestDataClasses:
     
     def test_message(self):
         """Test Message dataclass"""
+        from datetime import datetime
+        
         message = Message(
             message_id=1,
             chat_jid="1234567890@s.whatsapp.net",
@@ -151,4 +153,4 @@ class TestDataClasses:
         )
         assert message.message_id == 1
         assert message.from_me is False
-        assert isinstance(message.get_datetime(), type)
+        assert isinstance(message.get_datetime(), datetime)

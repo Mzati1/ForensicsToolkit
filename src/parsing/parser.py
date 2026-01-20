@@ -159,8 +159,18 @@ class WhatsAppParser:
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            # Query for chats - try different possible schemas
+            # Query for chats - try different possible schemas (simpler ones first)
             queries = [
+                # Simple test schema (most basic)
+                """
+                SELECT 
+                    jid.raw_string as jid,
+                    chat.subject as display_name,
+                    (SELECT COUNT(*) FROM message WHERE message.key_remote_jid = jid.raw_string) as message_count
+                FROM chat
+                JOIN jid ON chat.jid_row_id = jid._id
+                ORDER BY chat._id DESC
+                """,
                 # Modern schema
                 """
                 SELECT 
@@ -197,11 +207,23 @@ class WhatsAppParser:
                         # Determine if group chat
                         is_group = jid.endswith("@g.us") or "group" in jid.lower()
                         
+                        # sqlite3.Row doesn't have .get(), use try/except or check keys
+                        display_name = row['display_name'] if 'display_name' in row.keys() else None
+                        last_message_timestamp = None
+                        if 'last_message_timestamp' in row.keys():
+                            last_message_timestamp = row['last_message_timestamp']
+                        elif 'last_message_table_row_id' in row.keys():
+                            last_message_timestamp = row['last_message_table_row_id']
+                        elif 'last_message_row_id' in row.keys():
+                            last_message_timestamp = row['last_message_row_id']
+                        
+                        message_count = row['message_count'] if 'message_count' in row.keys() else 0
+                        
                         chat = Chat(
                             jid=jid,
-                            display_name=row.get('display_name') or self._get_contact_name(jid),
-                            last_message_timestamp=row.get('last_message_timestamp') or row.get('last_message_table_row_id'),
-                            message_count=row.get('message_count', 0),
+                            display_name=display_name or self._get_contact_name(jid),
+                            last_message_timestamp=last_message_timestamp,
+                            message_count=message_count,
                             is_group=is_group
                         )
                         
@@ -282,8 +304,10 @@ class WhatsAppParser:
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            # Build query based on available schema
-            base_query = """
+            # Build query based on available schema - try multiple schemas
+            queries_to_try = [
+                # Full schema with all columns
+                """
                 SELECT 
                     _id as message_id,
                     key_remote_jid as chat_jid,
@@ -297,72 +321,68 @@ class WhatsAppParser:
                     remote_resource as remote_resource,
                     status as status
                 FROM message
+                """,
+                # Simple schema without media_path
                 """
+                SELECT 
+                    _id as message_id,
+                    key_remote_jid as chat_jid,
+                    timestamp as timestamp,
+                    key_from_me as from_me,
+                    data as message_text,
+                    media_wa_type as media_type
+                FROM message
+                """,
+                # Older schema with messages table
+                """
+                SELECT 
+                    _id as message_id,
+                    key_remote_jid as chat_jid,
+                    timestamp as timestamp,
+                    key_from_me as from_me,
+                    data as message_text,
+                    media_wa_type as media_type,
+                    media_name as media_path
+                FROM messages
+                """
+            ]
             
-            if chat_jid:
-                base_query += " WHERE key_remote_jid = ?"
-            
-            base_query += " ORDER BY timestamp ASC"
-            
-            if limit:
-                base_query += f" LIMIT {limit}"
-            
-            try:
-                cursor.execute(base_query, (chat_jid,) if chat_jid else ())
-                rows = cursor.fetchall()
-                
-                for row in rows:
-                    message = Message(
-                        message_id=row['message_id'],
-                        chat_jid=row['chat_jid'],
-                        timestamp=row['timestamp'],
-                        from_me=bool(row['from_me']),
-                        message_text=row.get('message_text'),
-                        media_type=row.get('media_type'),
-                        media_path=row.get('media_path'),
-                        media_caption=row.get('media_caption'),
-                        quoted_message_id=row.get('quoted_message_id'),
-                        remote_resource=row.get('remote_resource'),
-                        status=row.get('status')
-                    )
-                    messages.append(message)
+            for base_query in queries_to_try:
+                try:
+                    query = base_query
+                    if chat_jid:
+                        query += " WHERE key_remote_jid = ?"
                     
-            except sqlite3.OperationalError:
-                # Try older schema
-                base_query = """
-                    SELECT 
-                        _id as message_id,
-                        key_remote_jid as chat_jid,
-                        timestamp as timestamp,
-                        key_from_me as from_me,
-                        data as message_text,
-                        media_wa_type as media_type,
-                        media_name as media_path
-                    FROM messages
-                    """
-                
-                if chat_jid:
-                    base_query += " WHERE key_remote_jid = ?"
-                
-                base_query += " ORDER BY timestamp ASC"
-                
-                if limit:
-                    base_query += f" LIMIT {limit}"
-                
-                cursor.execute(base_query, (chat_jid,) if chat_jid else ())
-                rows = cursor.fetchall()
-                
-                for row in rows:
-                    message = Message(
-                        message_id=row['message_id'],
-                        chat_jid=row['chat_jid'],
-                        timestamp=row['timestamp'],
-                        from_me=bool(row['from_me']),
-                        message_text=row.get('message_text'),
-                        media_type=row.get('media_type'),
-                        media_path=row.get('media_path')
-                    )
-                    messages.append(message)
+                    query += " ORDER BY timestamp ASC"
+                    
+                    if limit:
+                        query += f" LIMIT {limit}"
+                    
+                    cursor.execute(query, (chat_jid,) if chat_jid else ())
+                    rows = cursor.fetchall()
+                    
+                    for row in rows:
+                        row_keys = row.keys()
+                        message = Message(
+                            message_id=row['message_id'],
+                            chat_jid=row['chat_jid'],
+                            timestamp=row['timestamp'],
+                            from_me=bool(row['from_me']),
+                            message_text=row['message_text'] if 'message_text' in row_keys else None,
+                            media_type=row['media_type'] if 'media_type' in row_keys else None,
+                            media_path=row['media_path'] if 'media_path' in row_keys else None,
+                            media_caption=row['media_caption'] if 'media_caption' in row_keys else None,
+                            quoted_message_id=row['quoted_message_id'] if 'quoted_message_id' in row_keys else None,
+                            remote_resource=row['remote_resource'] if 'remote_resource' in row_keys else None,
+                            status=row['status'] if 'status' in row_keys else None
+                        )
+                        messages.append(message)
+                    
+                    # Successfully executed, break out of loop
+                    break
+                    
+                except sqlite3.OperationalError:
+                    continue
             
             logger.info(f"Extracted {len(messages)} messages")
             conn.close()
@@ -476,9 +496,11 @@ class WhatsAppParser:
                         
                         for row in rows:
                             if row['jid']:
+                                # sqlite3.Row doesn't have .get(), check if key exists
+                                display_name = row['display_name'] if 'display_name' in row.keys() else None
                                 contact = Contact(
                                     jid=row['jid'],
-                                    display_name=row.get('display_name')
+                                    display_name=display_name
                                 )
                                 contacts.append(contact)
                         
