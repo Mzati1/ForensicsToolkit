@@ -12,8 +12,19 @@ import zlib
 from enum import Enum
 from pathlib import Path
 from typing import Optional, Tuple
-from Crypto.Cipher import AES
 import logging
+
+# Try to import Crypto - support both pycryptodome and pycryptodomex
+try:
+    from Crypto.Cipher import AES
+except ImportError:
+    try:
+        from Cryptodome.Cipher import AES
+    except ImportError:
+        raise ImportError(
+            "pycryptodome or pycryptodomex is required. "
+            "Install with: pip install pycryptodome"
+        )
 
 logger = logging.getLogger(__name__)
 
