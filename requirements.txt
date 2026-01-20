@@ -1,0 +1,58 @@
+# Core cryptographic dependencies
+pycryptodome>=3.19.0
+pycryptodomex>=6.1.0
+
+# Forensic compliance and integrity
+hashlib  # Part of standard library, listed for documentation
+# MD5, SHA256, SHA512 hashing for evidence integrity verification
+
+# User interface and formatting
+colorama>=0.4.6
+
+# Database and data processing
+# sqlite3 is part of Python standard library
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Configuration management
+ConfigObj>=5.2.0
+
+# Packaging utilities
+packaging>=23.0
+
+# Google Drive backup extraction (whapa integration)
+gpsoauth>=1.0.0
+
+# iCloud backup extraction (whapa integration)
+pyicloud>=0.10.2
+
+# Web automation for Google Drive (whapa integration)
+selenium>=4.0.0
+webdriver-manager>=4.0.0
+selenium-stealth>=1.0.6
+
+# HTTP requests
+requests>=2.31.0
+
+# Crypt15 support (whatsapp-msgstore-viewer integration)
+javaobj-py3>=0.4.3
+protobuf>=3.20.0
+
+# GUI dependencies (optional, for whatsapp-msgstore-viewer)
+# kivy>=2.1.0
+# kivymd>=1.1.1
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Documentation and PDF processing
+PyPDF2>=3.0.0
+
+# Data analysis and visualization (optional)
+# whatstk>=0.4.0  # WhatsApp analysis toolkit (if needed)
+
+# Note: This toolkit builds upon and integrates with:
+# - Whapa toolset (tools/whapa/): WhatsApp parser, cipher, godri tools
+# - WhatsApp Msgstore Viewer (tools/whatsapp-msgstore-viewer/): Database viewer and crypt15 support
+# All dependencies should be installed for full functionality
