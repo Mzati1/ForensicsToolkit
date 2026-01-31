@@ -16,6 +16,11 @@ from typing import List, Dict, Optional
 from datetime import datetime
 import logging
 
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+
 from ..parsing.parser import Chat, Message, Contact, CallLog
 
 logger = logging.getLogger(__name__)
@@ -26,6 +31,7 @@ class ReportFormat(Enum):
     HTML = "html"
     JSON = "json"
     CSV = "csv"
+    PDF = "pdf"
 
 
 class WhatsAppReporter:
@@ -83,6 +89,111 @@ class WhatsAppReporter:
         logger.info(f"Generated HTML report: {output_file}")
         return str(output_file)
     
+    def generate_pdf_report(
+        self,
+        chats: List[Chat],
+        contacts: List[Contact],
+        call_logs: List[CallLog],
+        metadata: Optional[Dict] = None,
+        output_file: Optional[str] = None
+    ) -> str:
+        """
+        Generate PDF forensic report.
+        
+        Args:
+            chats: List of chats to include
+            contacts: List of contacts
+            call_logs: List of call logs
+            metadata: Optional metadata
+            output_file: Optional output file path
+            
+        Returns:
+            Path to generated report
+        """
+        if output_file is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_file = self.output_dir / f"whatsapp_report_{timestamp}.pdf"
+        else:
+            output_file = Path(output_file)
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            
+        metadata = metadata or {}
+        doc = SimpleDocTemplate(str(output_file), pagesize=letter)
+        styles = getSampleStyleSheet()
+        story = []
+        
+        # Title
+        title = metadata.get('company', 'WhatsApp Forensics Report')
+        story.append(Paragraph(title, styles['Title']))
+        story.append(Spacer(1, 12))
+        
+        # Metadata
+        story.append(Paragraph("Examination Information", styles['Heading2']))
+        meta_data = [
+            ["Record", str(metadata.get('record', 'N/A'))],
+            ["Unit", str(metadata.get('unit', 'N/A'))],
+            ["Examiner", metadata.get('examiner', 'Unknown')],
+            ["Date", datetime.now().strftime('%d-%m-%Y')],
+            ["Notes", metadata.get('notes', '')]
+        ]
+        t = Table(meta_data, colWidths=[100, 300])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (0, -1), colors.lightgrey),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('PADDING', (0, 0), (-1, -1), 6),
+        ]))
+        story.append(t)
+        story.append(Spacer(1, 12))
+        
+        # Summary
+        story.append(Paragraph("Summary", styles['Heading2']))
+        summary_data = [
+            ["Metric", "Count"],
+            ["Total Chats", str(len(chats))],
+            ["Total Contacts", str(len(contacts))],
+            ["Total Call Logs", str(len(call_logs))]
+        ]
+        t = Table(summary_data, colWidths=[200, 200])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ]))
+        story.append(t)
+        story.append(Spacer(1, 24))
+        
+        # Chats (limited to avoid huge PDF)
+        story.append(Paragraph("Chats (First 10)", styles['Heading2']))
+        for chat in chats[:10]:
+            story.append(Paragraph(f"Chat: {chat.display_name or chat.jid}", styles['Heading3']))
+            story.append(Paragraph(f"Messages: {chat.message_count}", styles['Normal']))
+            story.append(Spacer(1, 6))
+            
+            # Messages
+            msg_data = [["Time", "Sender", "Message"]]
+            for msg in chat.messages[:50]:  # Limit messages per chat
+                sender = "Me" if msg.from_me else "Other"
+                text = msg.message_text or "[Media/Other]"
+                # Truncate long text
+                if len(text) > 100:
+                    text = text[:97] + "..."
+                msg_data.append([msg.get_datetime().strftime("%H:%M"), sender, text])
+            
+            if len(msg_data) > 1:
+                t = Table(msg_data, colWidths=[80, 60, 300])
+                t.setStyle(TableStyle([
+                    ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+                    ('FONTSIZE', (0, 0), (-1, -1), 8),
+                    ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+                ]))
+                story.append(t)
+                story.append(Spacer(1, 12))
+        
+        doc.build(story)
+        logger.info(f"Generated PDF report: {output_file}")
+        return str(output_file)
+
     def _generate_html_content(
         self,
         chats: List[Chat],

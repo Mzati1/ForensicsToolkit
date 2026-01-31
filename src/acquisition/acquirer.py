@@ -11,10 +11,16 @@ import os
 import shutil
 import sqlite3
 import subprocess
+import sys
 from pathlib import Path
 from enum import Enum
-from typing import Optional, Dict, List, Tuple
+from typing import Optional, Dict, List, Tuple, Any
 import logging
+
+# Add project root to path to allow importing tools
+project_root = Path(__file__).resolve().parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +30,6 @@ class AcquisitionSource(Enum):
     ANDROID_ADB = "android_adb"
     ANDROID_FILE = "android_file"
     IOS_BACKUP = "ios_backup"
-    GOOGLE_DRIVE = "google_drive"
     LOCAL_FILES = "local_files"
 
 
@@ -36,7 +41,6 @@ class WhatsAppAcquirer:
     - Android devices via ADB
     - Android device files directly
     - iOS iTunes backups
-    - Google Drive backups
     - Local file system
     """
     
@@ -49,6 +53,7 @@ class WhatsAppAcquirer:
         """
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.logger = logger  # Ensure logger is available as instance variable if needed
         
     def acquire_from_android_adb(self, device_id: Optional[str] = None) -> Dict[str, str]:
         """
@@ -198,7 +203,7 @@ class WhatsAppAcquirer:
         except Exception as e:
             logger.error(f"ADB acquisition failed: {e}")
             raise
-    
+
     def acquire_from_files(self, source_dir: str) -> Dict[str, str]:
         """
         Acquire WhatsApp data from local file system.
@@ -209,64 +214,108 @@ class WhatsAppAcquirer:
         Returns:
             Dictionary with paths to acquired files
         """
-        logger.info(f"Starting file system acquisition from {source_dir}")
+        logger.info(f"Starting file acquisition from {source_dir}")
         result = {}
         
         source_path = Path(source_dir).resolve()
         if not source_path.exists():
-            abs_path = source_path.absolute()
-            raise ValueError(
-                f"Source directory does not exist: {source_dir}\n"
-                f"  Absolute path: {abs_path}\n"
-                f"  Please ensure the directory exists and contains WhatsApp data files.\n"
-                f"  Expected files include: msgstore.db, wa.db, msgstore.db.crypt12/14/15, etc."
-            )
+            # Try treating as relative path
+            source_path = Path(source_dir)
+            if not source_path.exists():
+                raise ValueError(f"Source directory does not exist: {source_dir}")
         
-        acquisition_dir = self.output_dir / "file_acquisition"
+        acquisition_dir = self.output_dir / "local_files"
         acquisition_dir.mkdir(parents=True, exist_ok=True)
         
-        # Look for common WhatsApp files
-        whatsapp_files = [
+        # Files to look for
+        target_files = [
             "msgstore.db",
             "msgstore.db.crypt12",
             "msgstore.db.crypt14",
             "msgstore.db.crypt15",
             "wa.db",
             "axolotl.db",
-            "chatsettings.db",
             "key"
         ]
         
-        # Search for files recursively
-        for root, dirs, files in os.walk(source_path):
+        # Walk through directory
+        for root, _, files in os.walk(source_path):
             for file in files:
-                if file in whatsapp_files or file.endswith(".crypt12") or file.endswith(".crypt14") or file.endswith(".crypt15"):
-                    src_file = Path(root) / file
+                if file in target_files or file.startswith("msgstore-") or file.endswith(".crypt14") or file.endswith(".crypt15"):
+                    source_file = Path(root) / file
                     dest_file = acquisition_dir / file
                     
-                    try:
-                        shutil.copy2(src_file, dest_file)
-                        result[str(src_file)] = str(dest_file)
-                        logger.info(f"Copied: {src_file} -> {dest_file}")
-                    except Exception as e:
-                        logger.warning(f"Could not copy {src_file}: {e}")
-            
-            # Also copy Media directory if found
-            if "Media" in dirs and "WhatsApp" in root:
-                media_src = Path(root) / "Media"
-                media_dest = acquisition_dir / "Media"
-                try:
-                    if media_dest.exists():
-                        shutil.rmtree(media_dest)
-                    shutil.copytree(media_src, media_dest)
-                    result[str(media_src)] = str(media_dest)
-                    logger.info(f"Copied Media directory: {media_src} -> {media_dest}")
-                except Exception as e:
-                    logger.warning(f"Could not copy Media directory: {e}")
+                    shutil.copy2(source_file, dest_file)
+                    result[str(source_file)] = str(dest_file)
+                    logger.info(f"✓ Acquired: {file}")
         
-        logger.info(f"File acquisition complete. Files: {len(result)}")
+        # Also look for Media folder
+        media_dir = source_path / "Media"
+        if media_dir.exists() and media_dir.is_dir():
+            dest_media = acquisition_dir / "Media"
+            if dest_media.exists():
+                shutil.rmtree(dest_media)
+            shutil.copytree(media_dir, dest_media)
+            result[str(media_dir)] = str(dest_media)
+            logger.info(f"✓ Acquired: Media folder")
+            
+        if not result:
+            logger.warning("No WhatsApp databases found in input directory")
+            
         return result
-    
+
+    def get_acquisition_summary(self, acquired_files: Dict[str, str]) -> Dict[str, Any]:
+        """
+        Get detailed summary of acquisition.
+        
+        Args:
+            acquired_files: Dictionary of acquired files
+            
+        Returns:
+            Dictionary with acquisition statistics and details
+        """
+        summary = {
+            "total_files": len(acquired_files),
+            "total_size_bytes": 0,
+            "databases": [],
+            "encrypted_databases": [],
+            "media_files": [],
+            "keys": [],
+            "others": []
+        }
+        
+        for name, path in acquired_files.items():
+            file_path = Path(path)
+            if file_path.exists():
+                if file_path.is_file():
+                    size = file_path.stat().st_size
+                    summary["total_size_bytes"] += size
+                    
+                    # Categorize
+                    name_lower = file_path.name.lower()
+                    if "crypt" in name_lower:
+                        summary["encrypted_databases"].append(str(file_path))
+                    elif name_lower.endswith(".db"):
+                        summary["databases"].append(str(file_path))
+                    elif name_lower == "key":
+                        summary["keys"].append(str(file_path))
+                    elif file_path.suffix.lower().strip('.') in ["jpg", "jpeg", "png", "mp4", "3gp", "opus", "webp"]:
+                        summary["media_files"].append(str(file_path))
+                    else:
+                        summary["others"].append(str(file_path))
+                        
+                elif file_path.is_dir():
+                    # Directory (e.g. Media)
+                    dir_size = 0
+                    for root, _, files in os.walk(file_path):
+                        for f in files:
+                            fp = Path(root) / f
+                            dir_size += fp.stat().st_size
+                    summary["total_size_bytes"] += dir_size
+                    summary["media_files"].append(str(file_path)) # Assume dirs are media folders
+                    
+        return summary
+
     def verify_database(self, db_path: str) -> bool:
         """
         Verify if a file is a valid SQLite database.
@@ -275,46 +324,20 @@ class WhatsAppAcquirer:
             db_path: Path to database file
             
         Returns:
-            True if valid SQLite database
+            True if valid SQLite database, False otherwise
         """
-        try:
-            conn = sqlite3.connect(db_path)
-            cursor = conn.cursor()
-            cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
-            tables = cursor.fetchall()
-            conn.close()
-            return len(tables) > 0
-        except Exception:
+        if not os.path.exists(db_path):
             return False
-    
-    def get_acquisition_summary(self, acquired_files: Dict[str, str]) -> Dict:
-        """
-        Generate summary of acquisition.
-        
-        Args:
-            acquired_files: Dictionary of acquired files
             
-        Returns:
-            Summary dictionary
-        """
-        summary = {
-            "total_files": len(acquired_files),
-            "databases": [],
-            "encrypted_databases": [],
-            "keys": [],
-            "media_dirs": []
-        }
-        
-        for dest_path in acquired_files.values():
-            path = Path(dest_path)
-            if path.suffix == ".db":
-                if self.verify_database(dest_path):
-                    summary["databases"].append(dest_path)
-            elif path.suffix in [".crypt12", ".crypt14", ".crypt15"]:
-                summary["encrypted_databases"].append(dest_path)
-            elif path.name == "key":
-                summary["keys"].append(dest_path)
-            elif path.name == "Media" or "Media" in dest_path:
-                summary["media_dirs"].append(dest_path)
-        
-        return summary
+        try:
+            # Open in read-only mode to check validity
+            conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+            cursor = conn.cursor()
+            cursor.execute("PRAGMA schema_version")
+            conn.close()
+            return True
+        except sqlite3.DatabaseError:
+            return False
+        except Exception as e:
+            self.logger.debug(f"Database verification failed: {e}")
+            return False

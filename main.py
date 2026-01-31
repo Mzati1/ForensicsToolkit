@@ -54,7 +54,7 @@ Examples:
     
     # Acquisition command
     acquire_parser = subparsers.add_parser('acquire', help='Acquire WhatsApp data')
-    acquire_parser.add_argument('--source', choices=['android_adb', 'file', 'ios'], required=True,
+    acquire_parser.add_argument('--source', choices=['android_adb', 'file'], required=True,
                                help='Acquisition source')
     acquire_parser.add_argument('--input', help='Input directory or device ID')
     acquire_parser.add_argument('--output', default='output', help='Output directory')
@@ -70,7 +70,7 @@ Examples:
     parse_parser.add_argument('--msgstore', required=True, help='Path to msgstore.db')
     parse_parser.add_argument('--wa', help='Path to wa.db (optional)')
     parse_parser.add_argument('--output', default='output/reports', help='Output directory for reports')
-    parse_parser.add_argument('--format', choices=['html', 'json', 'csv', 'all'], default='html',
+    parse_parser.add_argument('--format', choices=['html', 'json', 'csv', 'pdf', 'all'], default='html',
                              help='Report format')
     parse_parser.add_argument('--chat-limit', type=int, help='Limit number of chats to process')
     parse_parser.add_argument('--message-limit', type=int, help='Limit number of messages per chat')
@@ -82,7 +82,7 @@ Examples:
     full_parser.add_argument('--input', help='Input directory or device ID')
     full_parser.add_argument('--key', help='Key file for decryption (if needed)')
     full_parser.add_argument('--output', default='output', help='Output directory')
-    full_parser.add_argument('--format', choices=['html', 'json', 'csv', 'all'], default='html',
+    full_parser.add_argument('--format', choices=['html', 'json', 'csv', 'pdf', 'all'], default='html',
                             help='Report format')
     full_parser.add_argument('--metadata-company', help='Company name for report')
     full_parser.add_argument('--metadata-examiner', help='Examiner name for report')
@@ -185,7 +185,7 @@ def handle_parse(args):
         'notes': 'Automated forensic analysis report'
     }
     
-    formats = [args.format] if args.format != 'all' else ['html', 'json', 'csv']
+    formats = [args.format] if args.format != 'all' else ['html', 'json', 'csv', 'pdf']
     
     for fmt in formats:
         if fmt == 'html':
@@ -197,6 +197,9 @@ def handle_parse(args):
         elif fmt == 'csv':
             report_files = reporter.generate_csv_report(chats, contacts, call_logs)
             logger.info(f"Generated CSV reports: {report_files}")
+        elif fmt == 'pdf':
+            report_file = reporter.generate_pdf_report(chats, contacts, call_logs, metadata)
+            logger.info(f"Generated PDF report: {report_file}")
 
 
 def handle_full(args):
@@ -224,13 +227,17 @@ def handle_full(args):
     
     # Step 2: Decrypt if needed
     msgstore_path = None
-    if summary['encrypted_databases']:
+    
+    # Find encrypted databases in acquired files
+    encrypted_dbs = [path for name, path in acquired.items() if 'crypt' in Path(path).name or Path(path).name.endswith(('.crypt12', '.crypt14', '.crypt15'))]
+    
+    if encrypted_dbs:
         logger.info("Step 2: Decryption")
         if not args.key:
             logger.warning("Encrypted databases found but no key provided. Skipping decryption.")
         else:
             decryptor = WhatsAppDecryptor(args.key)
-            for enc_db in summary['encrypted_databases']:
+            for enc_db in encrypted_dbs:
                 decrypted = decryptor.decrypt(enc_db)
                 if decrypted:
                     msgstore_path = decrypted
@@ -239,15 +246,20 @@ def handle_full(args):
     
     # If no encrypted databases or decryption failed, look for unencrypted
     if not msgstore_path:
-        if summary['databases']:
-            msgstore_path = summary['databases'][0]
+        # Find unencrypted msgstore.db
+        unencrypted_dbs = [path for name, path in acquired.items() if Path(path).name == 'msgstore.db']
+        if unencrypted_dbs:
+            msgstore_path = unencrypted_dbs[0]
             logger.info(f"Using unencrypted database: {msgstore_path}")
         else:
             raise ValueError("No database found to parse")
     
     # Step 3: Parse
     logger.info("Step 3: Parsing")
-    wa_db_path = summary['databases'][1] if len(summary['databases']) > 1 else None
+    # Find wa.db if available
+    wa_dbs = [path for name, path in acquired.items() if Path(path).name == 'wa.db']
+    wa_db_path = wa_dbs[0] if wa_dbs else None
+    
     parser = WhatsAppParser(msgstore_path, wa_db_path)
     
     chats = parser.get_chats()

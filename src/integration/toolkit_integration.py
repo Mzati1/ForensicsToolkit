@@ -14,11 +14,6 @@ from pathlib import Path
 from typing import Optional, Dict, List
 import logging
 
-# Add tools directory to path
-tools_dir = Path(__file__).parent.parent.parent / "tools"
-sys.path.insert(0, str(tools_dir / "whapa" / "libs"))
-sys.path.insert(0, str(tools_dir / "whatsapp-msgstore-viewer"))
-
 from src.forensics import ChainOfCustody, HashVerifier, AuditLogger, ComplianceChecker
 from src.acquisition import WhatsAppAcquirer
 from src.crypto import WhatsAppDecryptor
