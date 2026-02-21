@@ -27,8 +27,11 @@ The toolkit is organized into four main modules:
 1. Initializes with an output directory for acquired data
 2. For ADB acquisition:
    - Checks for connected Android devices
+   - Derives a device label from the Android model or ID
    - Uses `adb pull` to extract databases from standard WhatsApp paths
-   - Handles encrypted databases (crypt12/14/15) and keys
+   - Stores results under `output/android_adb/<DEVICE_LABEL>/databases` and optionally `media`
+   - Attempts safe key acquisition via `run-as com.whatsapp` when possible
+   - Handles encrypted databases (crypt12/14/15) and keys (if accessible)
 3. For file acquisition:
    - Recursively searches directory for WhatsApp files
    - Copies databases, keys, and media directories

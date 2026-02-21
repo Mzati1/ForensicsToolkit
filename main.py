@@ -54,10 +54,19 @@ Examples:
     
     # Acquisition command
     acquire_parser = subparsers.add_parser('acquire', help='Acquire WhatsApp data')
-    acquire_parser.add_argument('--source', choices=['android_adb', 'file'], required=True,
-                               help='Acquisition source')
+    acquire_parser.add_argument(
+        '--source',
+        choices=['android_adb', 'file'],
+        default='android_adb',
+        help='Acquisition source (default: android_adb)'
+    )
     acquire_parser.add_argument('--input', help='Input directory or device ID')
     acquire_parser.add_argument('--output', default='output', help='Output directory')
+    acquire_parser.add_argument(
+        '--include-media',
+        action='store_true',
+        help='Also acquire WhatsApp media (images, videos, audio). May be large and slow.'
+    )
     
     # Decryption command
     decrypt_parser = subparsers.add_parser('decrypt', help='Decrypt WhatsApp database')
@@ -121,7 +130,8 @@ def handle_acquire(args):
     
     if args.source == 'android_adb':
         device_id = args.input if args.input else None
-        acquired = acquirer.acquire_from_android_adb(device_id)
+        include_media = getattr(args, "include_media", False)
+        acquired = acquirer.acquire_from_android_adb(device_id=device_id, include_media=include_media)
         summary = acquirer.get_acquisition_summary(acquired)
         logger.info(f"Acquisition complete. Summary: {summary}")
         

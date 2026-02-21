@@ -25,9 +25,14 @@ Run the toolkit via `main.py`.
 
 ### Acquisition
 
-Acquire data from an Android device connected via ADB:
+Acquire data from an Android device connected via ADB (default):
 ```bash
-python main.py acquire --source android_adb --output ./output
+python main.py acquire --output ./output
+```
+
+Acquire data from an Android device and include media (can be large/slow):
+```bash
+python main.py acquire --output ./output --include-media
 ```
 
 Acquire data from a local directory:
@@ -41,6 +46,10 @@ Decrypt an encrypted database using the key file:
 ```bash
 python main.py decrypt --input msgstore.db.crypt14 --key key --output msgstore.db
 ```
+
+If a key file was successfully acquired from the device, it will be stored as:
+- `output/android_adb/<DEVICE_LABEL>/key`
+You can pass this path to `--key`.
 
 ### Parsing and Reporting
 
@@ -64,6 +73,9 @@ python main.py full --source file --input /path/to/data --key key --output ./out
 - `tools/`: External tools (if any).
 - `tests/`: Unit and integration tests.
 - `output/`: Default output directory for acquired data and reports.
+  - `output/android_adb/<DEVICE_LABEL>/databases/`: WhatsApp databases acquired via ADB.
+  - `output/android_adb/<DEVICE_LABEL>/media/`: WhatsApp media (if `--include-media` was used).
+    - `<DEVICE_LABEL>` is derived from the Android device model or ID.
 
 ## License
 

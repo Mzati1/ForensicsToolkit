@@ -8,6 +8,7 @@ Handles acquisition of WhatsApp databases and media from various sources.
 """
 
 import os
+import re
 import shutil
 import sqlite3
 import subprocess
@@ -54,8 +55,34 @@ class WhatsAppAcquirer:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.logger = logger  # Ensure logger is available as instance variable if needed
-        
-    def acquire_from_android_adb(self, device_id: Optional[str] = None) -> Dict[str, str]:
+
+    def _sanitize_device_label(self, label: str) -> str:
+        safe = re.sub(r"[^A-Za-z0-9_.-]+", "_", label.strip())
+        if not safe:
+            return "device"
+        return safe
+
+    def _try_acquire_key_via_run_as(self, adb_cmd: List[str], device_dir: Path) -> Optional[str]:
+        key_path = device_dir / "key"
+        commands = [
+            adb_cmd + ["shell", "run-as", "com.whatsapp", "cat", "/data/data/com.whatsapp/files/key"],
+        ]
+        for cmd in commands:
+            try:
+                proc = subprocess.run(cmd, capture_output=True, text=False, timeout=10)
+                if proc.returncode == 0 and proc.stdout:
+                    device_dir.mkdir(parents=True, exist_ok=True)
+                    with open(key_path, "wb") as f:
+                        f.write(proc.stdout)
+                    logger.info(f"✓ Acquired WhatsApp key via run-as -> {key_path}")
+                    return str(key_path)
+            except subprocess.TimeoutExpired:
+                logger.debug("Timeout acquiring key via run-as")
+            except Exception as e:
+                logger.debug(f"Could not acquire key via run-as: {e}")
+        return None
+
+    def acquire_from_android_adb(self, device_id: Optional[str] = None, include_media: bool = False) -> Dict[str, str]:
         """
         Acquire WhatsApp data from Android device via ADB.
         
@@ -69,16 +96,12 @@ class WhatsAppAcquirer:
             Dictionary with paths to acquired files
         """
         logger.info("Starting ADB acquisition")
-        result = {}
+        result: Dict[str, str] = {}
+        acquired_dirs: List[Tuple[str, Path]] = []
         
-        # Check if ADB is available
         try:
-            adb_cmd = ["adb"]
-            if device_id:
-                adb_cmd.extend(["-s", device_id])
-            
-            # Check device connection
-            check_cmd = adb_cmd + ["devices"]
+            base_adb_cmd = ["adb"]
+            check_cmd = base_adb_cmd + ["devices"]
             proc = subprocess.run(check_cmd, capture_output=True, text=True)
             device_lines = [line for line in proc.stdout.splitlines() if "device" in line and "List" not in line]
             if not device_lines:
@@ -89,10 +112,39 @@ class WhatsAppAcquirer:
                     "  2. You've authorized the computer on your device\n"
                     "  3. Device shows as 'device' (not 'unauthorized' or 'offline')"
                 )
-            
+
+            selected_serial: Optional[str] = None
+            if device_id:
+                for line in device_lines:
+                    serial = line.split()[0]
+                    if serial == device_id:
+                        selected_serial = device_id
+                        break
+                if not selected_serial:
+                    raise RuntimeError(f"Requested device {device_id} not found in adb devices output")
+            else:
+                selected_serial = device_lines[0].split()[0]
+
+            adb_cmd = base_adb_cmd + ["-s", selected_serial]
+
+            device_label_raw = selected_serial or "device"
+            try:
+                model_proc = subprocess.run(
+                    adb_cmd + ["shell", "getprop", "ro.product.model"],
+                    capture_output=True,
+                    text=True,
+                    timeout=5,
+                )
+                model = model_proc.stdout.strip()
+                if model:
+                    device_label_raw = model
+            except Exception:
+                pass
+
+            device_label = self._sanitize_device_label(device_label_raw)
+
             logger.info(f"Device connected: {len(device_lines)} device(s) found")
             
-            # Check if device is rooted (try to access /data/data/)
             root_available = False
             test_root_cmd = adb_cmd + ["shell", "su", "-c", "ls /data/data/com.whatsapp 2>/dev/null"]
             root_test = subprocess.run(test_root_cmd, capture_output=True, text=True, timeout=5)
@@ -105,63 +157,72 @@ class WhatsAppAcquirer:
                     "Files in /data/data/ require root access."
                 )
             
-            # WhatsApp data paths - try SD card locations first (no root needed)
-            # Then try /data/data/ paths if root is available
-            whatsapp_paths = []
+            acquisition_root = self.output_dir / "android_adb"
+            acquisition_root.mkdir(parents=True, exist_ok=True)
+            acquisition_dir = acquisition_root / device_label
+            acquisition_dir.mkdir(parents=True, exist_ok=True)
+            databases_dir = acquisition_dir / "databases"
+            databases_dir.mkdir(parents=True, exist_ok=True)
+            media_dir = acquisition_dir / "media"
+            if include_media:
+                media_dir.mkdir(parents=True, exist_ok=True)
+
+            key_local_path = self._try_acquire_key_via_run_as(adb_cmd, acquisition_dir)
+            if key_local_path:
+                result["/data/data/com.whatsapp/files/key"] = key_local_path
             
-            # SD card paths (no root required)
-            whatsapp_paths.extend([
+            file_paths: List[str] = [
                 "/sdcard/WhatsApp/Databases/msgstore.db.crypt12",
                 "/sdcard/WhatsApp/Databases/msgstore.db.crypt14",
                 "/sdcard/WhatsApp/Databases/msgstore.db.crypt15",
                 "/storage/emulated/0/WhatsApp/Databases/msgstore.db.crypt12",
                 "/storage/emulated/0/WhatsApp/Databases/msgstore.db.crypt14",
                 "/storage/emulated/0/WhatsApp/Databases/msgstore.db.crypt15",
-            ])
+            ]
             
-            # /data/data/ paths (require root)
             if root_available:
-                whatsapp_paths.extend([
+                file_paths.extend([
                     "/data/data/com.whatsapp/databases/msgstore.db",
                     "/data/data/com.whatsapp/databases/wa.db",
                     "/data/data/com.whatsapp/databases/axolotl.db",
+                    "/data/data/com.whatsapp/files/key",
                 ])
             else:
                 logger.info("Skipping /data/data/ paths (root required)")
             
-            # Media directory (try multiple locations)
-            whatsapp_paths.extend([
-                "/sdcard/WhatsApp/Media",
-                "/storage/emulated/0/WhatsApp/Media",
-            ])
+            dir_paths: List[str] = [
+                "/sdcard/WhatsApp/Databases",
+                "/storage/emulated/0/WhatsApp/Databases",
+                "/sdcard/Android/media/com.whatsapp/WhatsApp/Databases",
+                "/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Databases",
+            ]
             
-            acquisition_dir = self.output_dir / "android_adb"
-            acquisition_dir.mkdir(parents=True, exist_ok=True)
+            if include_media:
+                dir_paths.extend([
+                    "/sdcard/WhatsApp/Media",
+                    "/storage/emulated/0/WhatsApp/Media",
+                    "/sdcard/Android/media/com.whatsapp/WhatsApp/Media",
+                    "/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media",
+                ])
             
-            for path in whatsapp_paths:
+            for path in file_paths:
                 try:
-                    # Check if path exists on device first
-                    test_cmd = adb_cmd + ["shell", "test", "-e", path, "&&", "echo", "exists"]
+                    test_cmd = adb_cmd + ["shell", "test", "-f", path, "&&", "echo", "exists"]
                     test_proc = subprocess.run(test_cmd, capture_output=True, text=True, timeout=10)
                     
                     if "exists" not in test_proc.stdout:
                         logger.debug(f"Path does not exist on device: {path}")
                         continue
                     
-                    # Handle directories vs files differently
-                    is_dir = "Media" in path
-                    
-                    if is_dir:
-                        # For directories, pull entire directory
-                        dest_path = acquisition_dir / Path(path).name
-                        if dest_path.exists():
-                            shutil.rmtree(dest_path)
-                        pull_cmd = adb_cmd + ["pull", path, str(dest_path)]
+                    filename = Path(path).name
+                    if "Databases" in path or filename.endswith(".db") or ".db.crypt" in filename:
+                        dest_base = databases_dir
+                    elif filename == "key":
+                        dest_base = acquisition_dir
                     else:
-                        # For files, pull to acquisition dir
-                        filename = Path(path).name
-                        dest_path = acquisition_dir / filename
-                        pull_cmd = adb_cmd + ["pull", path, str(dest_path)]
+                        dest_base = acquisition_dir
+                    dest_path = dest_base / filename
+                    pull_cmd = adb_cmd + ["pull", path, str(dest_path)]
                     
                     proc = subprocess.run(pull_cmd, capture_output=True, text=True, timeout=300)
                     
@@ -179,6 +240,72 @@ class WhatsAppAcquirer:
                     logger.warning(f"Timeout acquiring {path}")
                 except Exception as e:
                     logger.debug(f"Could not acquire {path}: {e}")
+            
+            for path in dir_paths:
+                try:
+                    test_cmd = adb_cmd + ["shell", "test", "-d", path, "&&", "echo", "exists"]
+                    test_proc = subprocess.run(test_cmd, capture_output=True, text=True, timeout=10)
+                    
+                    if "exists" not in test_proc.stdout:
+                        logger.debug(f"Directory does not exist on device: {path}")
+                        continue
+                    
+                    if "Databases" in path:
+                        dest_path = databases_dir
+                    elif "Media" in path:
+                        if not include_media:
+                            logger.debug(f"Skipping media directory (include_media is False): {path}")
+                            continue
+                        dest_path = media_dir
+                    else:
+                        dest_path = acquisition_dir / Path(path).name
+                    
+                    if dest_path.exists() and dest_path.is_dir():
+                        shutil.rmtree(dest_path)
+                    pull_cmd = adb_cmd + ["pull", path, str(dest_path)]
+                    
+                    proc = subprocess.run(pull_cmd, capture_output=True, text=True, timeout=300)
+                    
+                    if proc.returncode == 0 and dest_path.exists():
+                        if "Databases" in path:
+                            acquired_dirs.append((path, dest_path))
+                        if "Media" in path:
+                            result[path] = str(dest_path)
+                        logger.info(f"✓ Acquired directory: {path} -> {dest_path}")
+                    else:
+                        error_msg = proc.stderr.strip() if proc.stderr else proc.stdout.strip()
+                        if "Permission denied" in error_msg or "permission" in error_msg.lower():
+                            logger.warning(f"Permission denied for {path} (may require root)")
+                        else:
+                            logger.debug(f"Could not acquire directory {path}: {error_msg}")
+                    
+                except subprocess.TimeoutExpired:
+                    logger.warning(f"Timeout acquiring directory {path}")
+                except Exception as e:
+                    logger.debug(f"Could not acquire directory {path}: {e}")
+            
+            target_files = [
+                "msgstore.db",
+                "msgstore.db.crypt12",
+                "msgstore.db.crypt14",
+                "msgstore.db.crypt15",
+                "wa.db",
+                "axolotl.db",
+                "key"
+            ]
+            
+            for remote_dir, local_dir in acquired_dirs:
+                if not local_dir.exists() or not local_dir.is_dir():
+                    continue
+                for root, _, files in os.walk(local_dir):
+                    for file in files:
+                        if file in target_files or file.startswith("msgstore-") or file.endswith(".crypt12") or file.endswith(".crypt14") or file.endswith(".crypt15"):
+                            local_file = Path(root) / file
+                            rel_path = local_file.relative_to(local_dir).as_posix()
+                            remote_file = f"{remote_dir.rstrip('/')}/{rel_path}"
+                            if remote_file not in result:
+                                result[remote_file] = str(local_file)
+                                logger.info(f"✓ Indexed: {remote_file} -> {local_file}")
             
             if not result:
                 logger.warning(
