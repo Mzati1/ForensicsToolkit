@@ -78,11 +78,15 @@ Examples:
     parse_parser = subparsers.add_parser('parse', help='Parse WhatsApp database')
     parse_parser.add_argument('--msgstore', required=True, help='Path to msgstore.db')
     parse_parser.add_argument('--wa', help='Path to wa.db (optional)')
+    parse_parser.add_argument('--status', help='Path to status.db (optional)')
+    parse_parser.add_argument('--media', help='Path to media.db (optional)')
     parse_parser.add_argument('--output', default='output/reports', help='Output directory for reports')
     parse_parser.add_argument('--format', choices=['html', 'json', 'csv', 'pdf', 'all'], default='html',
                              help='Report format')
     parse_parser.add_argument('--chat-limit', type=int, help='Limit number of chats to process')
     parse_parser.add_argument('--message-limit', type=int, help='Limit number of messages per chat')
+    parse_parser.add_argument('--timeline', action='store_true', help='Generate unified event timeline')
+    parse_parser.add_argument('--chats', nargs='+', help='Select specific chats to include in report (JIDs or names)')
     
     # Full workflow command
     full_parser = subparsers.add_parser('full', help='Complete workflow: acquire, decrypt, parse, report')
@@ -166,11 +170,42 @@ def handle_parse(args):
     """Handle parsing command"""
     logger.info(f"Parsing database: {args.msgstore}")
     
-    parser = WhatsAppParser(args.msgstore, args.wa)
+    parser = WhatsAppParser(args.msgstore, args.wa, args.status, args.media)
     
     # Get data
     logger.info("Extracting chats...")
     chats = parser.get_chats()
+    
+    # Filter chats if requested
+    if args.chats:
+        filtered_chats = []
+        logger.info(f"Filtering chats against: {args.chats}")
+        logger.info(f"Total available chats to filter: {len(chats)}")
+        for chat in chats:
+            name = str(chat.display_name) if chat.display_name else "None"
+            jid = str(chat.jid)
+            logger.info(f"Checking chat: {name} ({jid})")
+            
+            # Check JID match or Name match
+            match_found = False
+            if jid in args.chats:
+                match_found = True
+            elif chat.display_name:
+                for sj in args.chats:
+                    if sj.lower() in chat.display_name.lower():
+                        match_found = True
+                        break
+            
+            if match_found:
+                filtered_chats.append(chat)
+                logger.info(f"MATCHED: {name} ({jid})")
+        
+        if not filtered_chats:
+            logger.warning(f"No chats found matching: {args.chats}")
+        else:
+            chats = filtered_chats
+            logger.info(f"Filtered to {len(chats)} chats")
+
     if args.chat_limit:
         chats = chats[:args.chat_limit]
     
@@ -183,6 +218,13 @@ def handle_parse(args):
     
     logger.info("Extracting call logs...")
     call_logs = parser.get_call_logs()
+    
+    # Unified timeline if requested
+    if args.timeline:
+        logger.info("Reconstructing event timeline...")
+        timeline = parser.get_event_timeline(limit=args.message_limit)
+        # For now, we'll log it, but ideally we'd add it to the report
+        logger.info(f"Timeline reconstructed with {len(timeline)} events")
     
     # Generate reports
     reporter = WhatsAppReporter(output_dir=args.output)
@@ -202,6 +244,11 @@ def handle_parse(args):
             report_file = reporter.generate_html_report(chats, contacts, call_logs, metadata)
             logger.info(f"Generated HTML report: {report_file}")
         elif fmt == 'json':
+            # Add timeline to JSON report if requested
+            data_to_export = {'chats': chats, 'contacts': contacts, 'call_logs': call_logs}
+            if args.timeline:
+                data_to_export['timeline'] = timeline
+            
             report_file = reporter.generate_json_report(chats, contacts, call_logs, metadata)
             logger.info(f"Generated JSON report: {report_file}")
         elif fmt == 'csv':
@@ -270,7 +317,14 @@ def handle_full(args):
     wa_dbs = [path for name, path in acquired.items() if Path(path).name == 'wa.db']
     wa_db_path = wa_dbs[0] if wa_dbs else None
     
-    parser = WhatsAppParser(msgstore_path, wa_db_path)
+    # Find status.db and media.db if available
+    status_dbs = [path for name, path in acquired.items() if Path(path).name == 'status.db']
+    status_db_path = status_dbs[0] if status_dbs else None
+    
+    media_dbs = [path for name, path in acquired.items() if Path(path).name == 'media.db']
+    media_db_path = media_dbs[0] if media_dbs else None
+    
+    parser = WhatsAppParser(msgstore_path, wa_db_path, status_db_path, media_db_path)
     
     chats = parser.get_chats()
     for chat in chats:
@@ -291,7 +345,7 @@ def handle_full(args):
         'notes': args.metadata_notes or 'Automated forensic analysis report'
     }
     
-    formats = [args.format] if args.format != 'all' else ['html', 'json', 'csv']
+    formats = [args.format] if args.format != 'all' else ['html', 'json', 'csv', 'pdf']
     
     for fmt in formats:
         if fmt == 'html':
@@ -303,6 +357,9 @@ def handle_full(args):
         elif fmt == 'csv':
             report_files = reporter.generate_csv_report(chats, contacts, call_logs)
             logger.info(f"Generated CSV reports: {report_files}")
+        elif fmt == 'pdf':
+            report_file = reporter.generate_pdf_report(chats, contacts, call_logs, metadata)
+            logger.info(f"Generated PDF report: {report_file}")
     
     logger.info("Full workflow complete!")
 

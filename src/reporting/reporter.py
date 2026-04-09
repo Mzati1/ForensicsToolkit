@@ -95,10 +95,11 @@ class WhatsAppReporter:
         contacts: List[Contact],
         call_logs: List[CallLog],
         metadata: Optional[Dict] = None,
-        output_file: Optional[str] = None
+        output_file: Optional[str] = None,
+        selected_jids: Optional[List[str]] = None
     ) -> str:
         """
-        Generate PDF forensic report.
+        Generate PDF forensic report with detailed chat conversations.
         
         Args:
             chats: List of chats to include
@@ -106,6 +107,7 @@ class WhatsAppReporter:
             call_logs: List of call logs
             metadata: Optional metadata
             output_file: Optional output file path
+            selected_jids: Optional list of JIDs to filter chats
             
         Returns:
             Path to generated report
@@ -120,6 +122,34 @@ class WhatsAppReporter:
         metadata = metadata or {}
         doc = SimpleDocTemplate(str(output_file), pagesize=letter)
         styles = getSampleStyleSheet()
+        
+        # Custom styles
+        styles.add(ParagraphStyle(
+            name='MeMessage',
+            parent=styles['Normal'],
+            alignment=2,  # Right
+            backgroundColor=colors.lightgreen,
+            borderPadding=5,
+            leftIndent=100,
+            spaceAfter=6
+        ))
+        styles.add(ParagraphStyle(
+            name='OtherMessage',
+            parent=styles['Normal'],
+            alignment=0,  # Left
+            backgroundColor=colors.lightgrey,
+            borderPadding=5,
+            rightIndent=100,
+            spaceAfter=6
+        ))
+        styles.add(ParagraphStyle(
+            name='Timestamp',
+            parent=styles['Normal'],
+            fontSize=7,
+            textColor=colors.grey,
+            spaceAfter=2
+        ))
+
         story = []
         
         # Title
@@ -163,32 +193,60 @@ class WhatsAppReporter:
         story.append(t)
         story.append(Spacer(1, 24))
         
-        # Chats (limited to avoid huge PDF)
-        story.append(Paragraph("Chats (First 10)", styles['Heading2']))
-        for chat in chats[:10]:
-            story.append(Paragraph(f"Chat: {chat.display_name or chat.jid}", styles['Heading3']))
-            story.append(Paragraph(f"Messages: {chat.message_count}", styles['Normal']))
-            story.append(Spacer(1, 6))
+        # Filter chats if JIDs provided
+        report_chats = chats
+        if selected_jids:
+            report_chats = [c for c in chats if c.jid in selected_jids]
+            if not report_chats:
+                # Fallback to name search if no JID matches
+                report_chats = [c for c in chats if c.display_name and any(sj.lower() in c.display_name.lower() for sj in selected_jids)]
+        
+        # Limit total chats in PDF to avoid massive files if no selection
+        if not selected_jids:
+            report_chats = report_chats[:20]
+
+        story.append(Paragraph("Detailed Conversations", styles['Heading2']))
+        
+        for chat in report_chats:
+            from reportlab.platypus import PageBreak
+            story.append(PageBreak())
+            
+            chat_title = f"Chat: {chat.display_name or chat.jid}"
+            story.append(Paragraph(chat_title, styles['Heading2']))
+            story.append(Paragraph(f"JID: {chat.jid}", styles['Normal']))
+            story.append(Paragraph(f"Type: {'Group' if chat.is_group else 'Individual'}", styles['Normal']))
+            if chat.participants:
+                story.append(Paragraph(f"Participants: {', '.join(chat.participants[:20])}", styles['Normal']))
+            story.append(Spacer(1, 12))
             
             # Messages
-            msg_data = [["Time", "Sender", "Message"]]
-            for msg in chat.messages[:50]:  # Limit messages per chat
-                sender = "Me" if msg.from_me else "Other"
-                text = msg.message_text or "[Media/Other]"
-                # Truncate long text
-                if len(text) > 100:
-                    text = text[:97] + "..."
-                msg_data.append([msg.get_datetime().strftime("%H:%M"), sender, text])
-            
-            if len(msg_data) > 1:
-                t = Table(msg_data, colWidths=[80, 60, 300])
-                t.setStyle(TableStyle([
-                    ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
-                    ('FONTSIZE', (0, 0), (-1, -1), 8),
-                    ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
-                ]))
-                story.append(t)
-                story.append(Spacer(1, 12))
+            if not chat.messages:
+                story.append(Paragraph("No messages found in this chat.", styles['Italic']))
+                continue
+
+            for msg in chat.messages:
+                ts_str = msg.get_datetime().strftime("%Y-%m-%d %H:%M:%S")
+                sender_name = "Me" if msg.from_me else (chat.display_name or "Other")
+                
+                # Remote resource for group chats
+                if chat.is_group and not msg.from_me and msg.remote_resource:
+                    sender_name = f"{sender_name} ({msg.remote_resource})"
+
+                text = msg.message_text or ""
+                if not text and msg.media_type:
+                    text = f"[Media Type {msg.media_type}]"
+                    if msg.media_path:
+                        text += f" - {Path(msg.media_path).name}"
+                
+                if not text:
+                    text = "[No Content]"
+
+                # Message bubble style
+                style_name = 'MeMessage' if msg.from_me else 'OtherMessage'
+                
+                story.append(Paragraph(ts_str, styles['Timestamp']))
+                story.append(Paragraph(f"<b>{sender_name}</b>: {text}", styles[style_name]))
+                story.append(Spacer(1, 2))
         
         doc.build(story)
         logger.info(f"Generated PDF report: {output_file}")
