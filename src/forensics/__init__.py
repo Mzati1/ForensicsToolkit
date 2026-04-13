@@ -9,5 +9,14 @@ from .chain_of_custody import ChainOfCustody, EvidenceItem
 from .hash_verification import HashVerifier
 from .audit_logger import AuditLogger
 from .compliance import ComplianceChecker
+from .write_blocker import SoftwareWriteBlocker, WriteBlockerStatus
 
-__all__ = ['ChainOfCustody', 'EvidenceItem', 'HashVerifier', 'AuditLogger', 'ComplianceChecker']
+__all__ = [
+    'ChainOfCustody',
+    'EvidenceItem',
+    'HashVerifier',
+    'AuditLogger',
+    'ComplianceChecker',
+    'SoftwareWriteBlocker',
+    'WriteBlockerStatus',
+]

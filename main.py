@@ -17,6 +17,7 @@ from src.acquisition import WhatsAppAcquirer, AcquisitionSource
 from src.crypto import WhatsAppDecryptor
 from src.parsing import WhatsAppParser
 from src.reporting import WhatsAppReporter, ReportFormat
+from src.integration import ForensicToolkitIntegration
 
 # Setup logging
 logging.basicConfig(
@@ -47,6 +48,9 @@ Examples:
 
   # Full workflow: acquire, decrypt, parse, and report
   python main.py full --source file --input ./whatsapp_data --key key --output ./output
+
+  # Complete case workflow with custody and audit artifacts
+  python main.py case --case-id CASE001 --examiner "Analyst" --source android_adb --output ./output
         """
     )
     
@@ -102,6 +106,31 @@ Examples:
     full_parser.add_argument('--metadata-record', help='Record number for report')
     full_parser.add_argument('--metadata-notes', help='Notes for report')
     
+    # Case workflow command
+    case_parser = subparsers.add_parser(
+        'case',
+        help='End-to-end case workflow with custody and audit artifacts'
+    )
+    case_parser.add_argument('--case-id', required=True, help='Unique case identifier')
+    case_parser.add_argument('--examiner', required=True, help='Examiner/operator name')
+    case_parser.add_argument('--source', choices=['android_adb', 'file'], required=True,
+                            help='Acquisition source')
+    case_parser.add_argument('--input', help='Input directory for file source')
+    case_parser.add_argument('--device-id', help='ADB device serial for android_adb source')
+    case_parser.add_argument('--key', help='Key file for decryption if encrypted db is found')
+    case_parser.add_argument('--output', default='output', help='Output directory')
+    case_parser.add_argument('--format', choices=['html', 'json', 'csv', 'pdf', 'all'], default='all',
+                            help='Report format')
+    case_parser.add_argument('--include-media', action='store_true',
+                            help='Acquire WhatsApp media folders during acquisition')
+    case_parser.add_argument('--disable-write-blocker', action='store_true',
+                            help='Disable software write blocker checks (not recommended)')
+    case_parser.add_argument('--metadata-company', help='Company name for report')
+    case_parser.add_argument('--metadata-examiner', help='Examiner name for report header')
+    case_parser.add_argument('--metadata-record', help='Record number for report')
+    case_parser.add_argument('--metadata-unit', help='Unit/department for report')
+    case_parser.add_argument('--metadata-notes', help='Notes for report')
+    
     args = parser.parse_args()
     
     if not args.command:
@@ -117,6 +146,8 @@ Examples:
             handle_parse(args)
         elif args.command == 'full':
             handle_full(args)
+        elif args.command == 'case':
+            handle_case(args)
         else:
             parser.print_help()
             sys.exit(1)
@@ -362,6 +393,44 @@ def handle_full(args):
             logger.info(f"Generated PDF report: {report_file}")
     
     logger.info("Full workflow complete!")
+
+
+def handle_case(args):
+    """Handle modular end-to-end case workflow command."""
+    logger.info(f"Starting case workflow for case {args.case_id}")
+
+    integration = ForensicToolkitIntegration(
+        case_id=args.case_id,
+        examiner=args.examiner,
+        output_dir=args.output,
+        enforce_write_blocker=not args.disable_write_blocker
+    )
+
+    metadata = {
+        'company': args.metadata_company or 'WhatsApp Forensics Report',
+        'examiner': args.metadata_examiner or args.examiner,
+        'record': args.metadata_record or args.case_id,
+        'unit': args.metadata_unit or 'Forensics Unit',
+        'notes': args.metadata_notes or 'Automated forensic case workflow'
+    }
+
+    result = integration.run_case_workflow(
+        source=args.source,
+        method='forensic_logical_copy',
+        input_path=args.input,
+        device_id=args.device_id,
+        key_file=args.key,
+        report_format=args.format,
+        metadata=metadata,
+        include_media=args.include_media,
+    )
+
+    if not result.get('success'):
+        raise RuntimeError(result.get('error', 'Case workflow failed'))
+
+    logger.info(f"Case directory: {result['case_directory']}")
+    logger.info(f"Bundle directory: {result['bundle_directory']}")
+    logger.info(f"Manifest: {result['manifest']}")
 
 
 if __name__ == '__main__':

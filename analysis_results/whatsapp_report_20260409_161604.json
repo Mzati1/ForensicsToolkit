@@ -1,0 +1,6522 @@
+{
+  "metadata": {
+    "company": "WhatsApp Forensics Report",
+    "examiner": "Forensics Tool",
+    "record": "N/A",
+    "unit": "Forensics Unit",
+    "notes": "Automated forensic analysis report"
+  },
+  "generated_at": "2026-04-09T16:16:04.315227",
+  "summary": {
+    "total_chats": 31,
+    "total_contacts": 47,
+    "total_call_logs": 0,
+    "total_messages": 662
+  },
+  "contacts": [
+    {
+      "jid": "265994143967@s.whatsapp.net",
+      "display_name": "Tropical supplies",
+      "phone_number": "265994143967"
+    },
+    {
+      "jid": "265999450275@s.whatsapp.net",
+      "display_name": "ITMozzy",
+      "phone_number": "265999450275"
+    },
+    {
+      "jid": "status@broadcast",
+      "display_name": null,
+      "phone_number": "status"
+    },
+    {
+      "jid": "265884070943@s.whatsapp.net",
+      "display_name": "Upendo ❤️",
+      "phone_number": "265884070943"
+    },
+    {
+      "jid": "120363422499383310@g.us",
+      "display_name": "Group2 Forensic",
+      "phone_number": "120363422499383310"
+    },
+    {
+      "jid": "265888953385@s.whatsapp.net",
+      "display_name": "Mzati",
+      "phone_number": "265888953385"
+    },
+    {
+      "jid": "265889767854@s.whatsapp.net",
+      "display_name": "Rue❤️",
+      "phone_number": "265889767854"
+    },
+    {
+      "jid": "13135550002@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "13135550002"
+    },
+    {
+      "jid": "867051314767696@bot",
+      "display_name": null,
+      "phone_number": "867051314767696"
+    },
+    {
+      "jid": "265992412013@s.whatsapp.net",
+      "display_name": "Xi-wang",
+      "phone_number": "265992412013"
+    },
+    {
+      "jid": "265997857480@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265997857480"
+    },
+    {
+      "jid": "265991073008@s.whatsapp.net",
+      "display_name": "Lastone",
+      "phone_number": "265991073008"
+    },
+    {
+      "jid": "265885145108@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265885145108"
+    },
+    {
+      "jid": "265893246286@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265893246286"
+    },
+    {
+      "jid": "265880360401@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265880360401"
+    },
+    {
+      "jid": "265897126607@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265897126607"
+    },
+    {
+      "jid": "265896828083@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265896828083"
+    },
+    {
+      "jid": "265887541225@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265887541225"
+    },
+    {
+      "jid": "265884235675@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265884235675"
+    },
+    {
+      "jid": "265883326535@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265883326535"
+    },
+    {
+      "jid": "265884057276@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265884057276"
+    },
+    {
+      "jid": "265888524442@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265888524442"
+    },
+    {
+      "jid": "265880121250@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265880121250"
+    },
+    {
+      "jid": "265894356708@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265894356708"
+    },
+    {
+      "jid": "265881657007@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265881657007"
+    },
+    {
+      "jid": "265883111738@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265883111738"
+    },
+    {
+      "jid": "265888530125@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265888530125"
+    },
+    {
+      "jid": "265886141749@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265886141749"
+    },
+    {
+      "jid": "265886391325@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265886391325"
+    },
+    {
+      "jid": "265883449321@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265883449321"
+    },
+    {
+      "jid": "265887329543@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265887329543"
+    },
+    {
+      "jid": "265885876418@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265885876418"
+    },
+    {
+      "jid": "265888990000@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265888990000"
+    },
+    {
+      "jid": "265883452423@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265883452423"
+    },
+    {
+      "jid": "265980315990@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265980315990"
+    },
+    {
+      "jid": "265884267687@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265884267687"
+    },
+    {
+      "jid": "265881155657@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265881155657"
+    },
+    {
+      "jid": "265887408451@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265887408451"
+    },
+    {
+      "jid": "265888532034@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265888532034"
+    },
+    {
+      "jid": "265897673579@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265897673579"
+    },
+    {
+      "jid": "265884959574@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265884959574"
+    },
+    {
+      "jid": "265888428928@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265888428928"
+    },
+    {
+      "jid": "265885090061@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265885090061"
+    },
+    {
+      "jid": "265889518895@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265889518895"
+    },
+    {
+      "jid": "265884098864@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265884098864"
+    },
+    {
+      "jid": "265890298174@s.whatsapp.net",
+      "display_name": null,
+      "phone_number": "265890298174"
+    },
+    {
+      "jid": "38942619508855@lid",
+      "display_name": null,
+      "phone_number": "38942619508855"
+    }
+  ],
+  "chats": [
+    {
+      "jid": "120363422499383310@g.us",
+      "display_name": "Group2 Forensic",
+      "is_group": true,
+      "participants": [],
+      "message_count": 387,
+      "last_message_timestamp": 961,
+      "messages": [
+        {
+          "message_id": 246,
+          "timestamp": 1756029252000,
+          "from_me": true,
+          "message_text": "Group2 Forensic",
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 245,
+          "timestamp": 1772474203129,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 44,
+          "timestamp": 1772474205367,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 247,
+          "timestamp": 1772987627000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 250,
+          "timestamp": 1772987639000,
+          "from_me": false,
+          "message_text": "Hmm",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 291,
+          "timestamp": 1773054551000,
+          "from_me": false,
+          "message_text": "Today's meetings should be our teams mawa will assess progress is it okay ?@all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 292,
+          "timestamp": 1773054792000,
+          "from_me": false,
+          "message_text": "Yes 🥲",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 328,
+          "timestamp": 1773142569000,
+          "from_me": false,
+          "message_text": "Are we meeting",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 329,
+          "timestamp": 1773143310000,
+          "from_me": false,
+          "message_text": "I hope so",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 330,
+          "timestamp": 1773143353000,
+          "from_me": false,
+          "message_text": "What timem",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 331,
+          "timestamp": 1773143393000,
+          "from_me": false,
+          "message_text": "Lets wait others have gone to admin for same project issue",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 332,
+          "timestamp": 1773143589000,
+          "from_me": false,
+          "message_text": "2 pm cafe",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 333,
+          "timestamp": 1773143600000,
+          "from_me": false,
+          "message_text": "@all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 334,
+          "timestamp": 1773144207000,
+          "from_me": false,
+          "message_text": "Tikukudkiran zbweran @all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 335,
+          "timestamp": 1773144830000,
+          "from_me": false,
+          "message_text": "Coming",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 336,
+          "timestamp": 1773144832000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260315-WA0004.webp",
+          "status": 16
+        },
+        {
+          "message_id": 337,
+          "timestamp": 1773145996000,
+          "from_me": false,
+          "message_text": "Ma guys mukutani kod @⁨all⁩",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 338,
+          "timestamp": 1773158815000,
+          "from_me": false,
+          "message_text": "@all  Depend on current changes and what we are doing @247085324619853  is it okay that GitHub repository should be edited or  starting from scratch ????",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 339,
+          "timestamp": 1773158919000,
+          "from_me": false,
+          "message_text": "And I have heard that during the defending system they check GitHub contributions",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 340,
+          "timestamp": 1773162497000,
+          "from_me": false,
+          "message_text": "You can make pull requests that's why it's there in the first place",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 341,
+          "timestamp": 1773162506000,
+          "from_me": false,
+          "message_text": "Zabhobho",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 342,
+          "timestamp": 1773162601000,
+          "from_me": false,
+          "message_text": "Ok",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 347,
+          "timestamp": 1773239595000,
+          "from_me": false,
+          "message_text": "@247085324619853 if possible can you talk to Albert to share their proposal so that we can see how the first parts of the proposal are reflecting in the dissertation",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 348,
+          "timestamp": 1773239639000,
+          "from_me": false,
+          "message_text": "Okay bhobho",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 349,
+          "timestamp": 1773255994000,
+          "from_me": false,
+          "message_text": "Group 11-Secure Cardless Transaction System-Dissertation.pdf",
+          "media_type": 9,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 350,
+          "timestamp": 1773256042000,
+          "from_me": false,
+          "message_text": "Timafuna proposal not dissertation",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 351,
+          "timestamp": 1773256056000,
+          "from_me": false,
+          "message_text": "Yeah wait",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 352,
+          "timestamp": 1773256096000,
+          "from_me": false,
+          "message_text": "Sanandiyankhe that one",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 353,
+          "timestamp": 1773256290000,
+          "from_me": false,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 354,
+          "timestamp": 1773260041000,
+          "from_me": false,
+          "message_text": "@194235735245044  feedback ys MACRA ?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 356,
+          "timestamp": 1773260529000,
+          "from_me": false,
+          "message_text": "I was occupied today couldn't have done it",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 357,
+          "timestamp": 1773260534000,
+          "from_me": false,
+          "message_text": "I will try tomorrow",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 358,
+          "timestamp": 1773294771000,
+          "from_me": false,
+          "message_text": "You guys wanted to meet the actual CG?\nHe is often in meetings.I doubt if I can find someone with his personal line",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 359,
+          "timestamp": 1773294771000,
+          "from_me": false,
+          "message_text": "The wisest thing would be to talk to his secretary",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 360,
+          "timestamp": 1773294772000,
+          "from_me": false,
+          "message_text": "Blesssing Kammata\n\nbkammata@mra.mw\n\n0888890736\n0991169832",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 361,
+          "timestamp": 1773294862000,
+          "from_me": false,
+          "message_text": "@97968690618591 that's what my aunt said",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 362,
+          "timestamp": 1773294916000,
+          "from_me": false,
+          "message_text": "Ok",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 363,
+          "timestamp": 1773294929000,
+          "from_me": false,
+          "message_text": "I will follow up with him",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 364,
+          "timestamp": 1773307885000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 9,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 365,
+          "timestamp": 1773307886000,
+          "from_me": false,
+          "message_text": "Research Proposal - Secure Cardless Transaction System.pdf",
+          "media_type": 9,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 366,
+          "timestamp": 1773307886000,
+          "from_me": false,
+          "message_text": "Research Proposal - Secure Cardless Transaction System Grouup11.pdf",
+          "media_type": 9,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 368,
+          "timestamp": 1773319381000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 12,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 370,
+          "timestamp": 1773319383000,
+          "from_me": false,
+          "message_text": "The transportation booking is done, had been approved",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0005.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 369,
+          "timestamp": 1773319383000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 371,
+          "timestamp": 1773319384000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0006.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 372,
+          "timestamp": 1773319384000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0007.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 373,
+          "timestamp": 1773319385000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0008.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 422,
+          "timestamp": 1773579241000,
+          "from_me": false,
+          "message_text": "Artifacts guys, let's meet tomorrow for a overview",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 423,
+          "timestamp": 1773582420000,
+          "from_me": false,
+          "message_text": "@6408829432048 @233564717187076 @194235735245044",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 449,
+          "timestamp": 1773657718000,
+          "from_me": false,
+          "message_text": "Let's meet after etha",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 450,
+          "timestamp": 1773657719000,
+          "from_me": false,
+          "message_text": "@194235735245044 @192131201298513 @6408829432048 @233564717187076",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 451,
+          "timestamp": 1773657909000,
+          "from_me": false,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 452,
+          "timestamp": 1773674869000,
+          "from_me": false,
+          "message_text": "@all  everything will be sorted out I will deliver the response soon",
+          "media_type": 42,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 453,
+          "timestamp": 1773675037000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0000.webp",
+          "status": 16
+        },
+        {
+          "message_id": 454,
+          "timestamp": 1773675235000,
+          "from_me": false,
+          "message_text": "Nde chotumizra view once nchan?\nChufuna kukuchtkira nd chan?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 455,
+          "timestamp": 1773675540000,
+          "from_me": false,
+          "message_text": "Iwe 🥹",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 456,
+          "timestamp": 1773678419000,
+          "from_me": false,
+          "message_text": "Let's meet at 7 cafe",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 457,
+          "timestamp": 1773678442000,
+          "from_me": false,
+          "message_text": "Okay okay",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 458,
+          "timestamp": 1773678574000,
+          "from_me": false,
+          "message_text": "@194235735245044 @233564717187076 @192131201298513 @6408829432048",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 459,
+          "timestamp": 1773678759000,
+          "from_me": false,
+          "message_text": "8",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 460,
+          "timestamp": 1773678808000,
+          "from_me": false,
+          "message_text": "7 - 8",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 461,
+          "timestamp": 1773680628000,
+          "from_me": false,
+          "message_text": "Where are you gus",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 462,
+          "timestamp": 1773680779000,
+          "from_me": false,
+          "message_text": "Am at the cafe",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 464,
+          "timestamp": 1773680780000,
+          "from_me": false,
+          "message_text": "Generator side",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 465,
+          "timestamp": 1773681332000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0002.webp",
+          "status": 13
+        },
+        {
+          "message_id": 466,
+          "timestamp": 1773681390000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0003.webp",
+          "status": 13
+        },
+        {
+          "message_id": 467,
+          "timestamp": 1773681394000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0004.webp",
+          "status": 13
+        },
+        {
+          "message_id": 468,
+          "timestamp": 1773681411000,
+          "from_me": true,
+          "message_text": "@260133519138858 hi",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 469,
+          "timestamp": 1773681449000,
+          "from_me": true,
+          "message_text": "@97968690618591 mutu waKO",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 470,
+          "timestamp": 1773681462000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0005.webp",
+          "status": 13
+        },
+        {
+          "message_id": 471,
+          "timestamp": 1773681476000,
+          "from_me": true,
+          "message_text": "@247085324619853 best group member award",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 472,
+          "timestamp": 1773681512000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0006.webp",
+          "status": 13
+        },
+        {
+          "message_id": 478,
+          "timestamp": 1773732679000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 9,
+          "media_path": "Media/WhatsApp Documents/Doc1.pdf111.pdf",
+          "status": 17
+        },
+        {
+          "message_id": 480,
+          "timestamp": 1773732823000,
+          "from_me": false,
+          "message_text": "OK bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 17
+        },
+        {
+          "message_id": 481,
+          "timestamp": 1773732907000,
+          "from_me": false,
+          "message_text": "Nde the dates should be this week",
+          "media_type": 0,
+          "media_path": null,
+          "status": 17
+        },
+        {
+          "message_id": 482,
+          "timestamp": 1773732912000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 15,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 483,
+          "timestamp": 1773732955000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 15,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 484,
+          "timestamp": 1773732966000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 17
+        },
+        {
+          "message_id": 485,
+          "timestamp": 1773732967000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0007.jpg",
+          "status": 17
+        },
+        {
+          "message_id": 486,
+          "timestamp": 1773732967000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0008.jpg",
+          "status": 17
+        },
+        {
+          "message_id": 487,
+          "timestamp": 1773733013000,
+          "from_me": false,
+          "message_text": "I believe you said yes",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 488,
+          "timestamp": 1773733734000,
+          "from_me": false,
+          "message_text": "Yes and further details to follow",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 489,
+          "timestamp": 1773733794000,
+          "from_me": false,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 490,
+          "timestamp": 1773736701000,
+          "from_me": false,
+          "message_text": "Can u ask the driver if tomorrow atha kutipatsa mpata  coz friday and thursday its impossible due to classes unless we sacrifice next week its mindsem april is approaching",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 491,
+          "timestamp": 1773737400000,
+          "from_me": false,
+          "message_text": "Which classes🫩🫩 mesa malecturer amaliza kuphunzsa za mayeso",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 492,
+          "timestamp": 1773737463000,
+          "from_me": false,
+          "message_text": "Yes, we are in a position to come. This week is preferred tomorrow, Thursday, Friday, or Saturday depending on your convenience, as next week we have mid-semester exams and April is approaching for project submission",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 493,
+          "timestamp": 1773737478000,
+          "from_me": false,
+          "message_text": "This is my response nde ndngodkra anskyankhe tiona",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 494,
+          "timestamp": 1773737712000,
+          "from_me": false,
+          "message_text": "Nde mwaikapo Sartuday eti🫩",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 495,
+          "timestamp": 1773737766000,
+          "from_me": false,
+          "message_text": "💀",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 496,
+          "timestamp": 1773738024000,
+          "from_me": false,
+          "message_text": "I forgot sorry I will see response and negotiate please sorry",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 497,
+          "timestamp": 1773738231000,
+          "from_me": false,
+          "message_text": "Hope let's go to the drive office",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 498,
+          "timestamp": 1773738346000,
+          "from_me": false,
+          "message_text": "Am in BT bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 499,
+          "timestamp": 1773738407000,
+          "from_me": false,
+          "message_text": "Am going to the drive office to ask for tomorrow",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 500,
+          "timestamp": 1773738498000,
+          "from_me": false,
+          "message_text": "Okay okay",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 501,
+          "timestamp": 1773739748000,
+          "from_me": false,
+          "message_text": "I believe we are meeting  as group together",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 502,
+          "timestamp": 1773740622000,
+          "from_me": false,
+          "message_text": "What time?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 503,
+          "timestamp": 1773740965000,
+          "from_me": false,
+          "message_text": "Mesa u r  the one who drafted the timetable",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 504,
+          "timestamp": 1773745841000,
+          "from_me": false,
+          "message_text": "@all friday morning hours confirmed date keep note",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 505,
+          "timestamp": 1773747210000,
+          "from_me": false,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 506,
+          "timestamp": 1773747333000,
+          "from_me": false,
+          "message_text": "Today's meeting ikhale usiku coz ife tkukapanga za transport apa",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 507,
+          "timestamp": 1773765636000,
+          "from_me": false,
+          "message_text": "The Dr.. Woman is so loving 😅🙌 she wanted to come to save our monies 😅😅😅 I clearly told her its university providing transport she is okay 👍🤣🤣",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 508,
+          "timestamp": 1773765670000,
+          "from_me": false,
+          "message_text": "Komano lunch is not ours we should tell her that",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 509,
+          "timestamp": 1773765672000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0007.webp",
+          "status": 16
+        },
+        {
+          "message_id": 510,
+          "timestamp": 1773765729000,
+          "from_me": false,
+          "message_text": "😂 iwe be responsible for ur life 🙌 ukawiritsa mbatata zayamba",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 511,
+          "timestamp": 1773766328000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0008.webp",
+          "status": 16
+        },
+        {
+          "message_id": 512,
+          "timestamp": 1773768865000,
+          "from_me": false,
+          "message_text": "Tkumana kutiko?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 513,
+          "timestamp": 1773769949000,
+          "from_me": false,
+          "message_text": "Are meeting or mawa ?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 514,
+          "timestamp": 1773770186000,
+          "from_me": false,
+          "message_text": "Ah I'm not sure",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 515,
+          "timestamp": 1773770193000,
+          "from_me": false,
+          "message_text": "My team isn't meeting",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 516,
+          "timestamp": 1773770195000,
+          "from_me": false,
+          "message_text": "What's the agenda",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 517,
+          "timestamp": 1773770260000,
+          "from_me": false,
+          "message_text": "We said we will check progress tidziona zomwe tkupanga if no progress ndekut tioneso what we can do",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 518,
+          "timestamp": 1773770463000,
+          "from_me": false,
+          "message_text": "We can meet",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 519,
+          "timestamp": 1773770471000,
+          "from_me": false,
+          "message_text": "Schedule a time and place",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 520,
+          "timestamp": 1773770492000,
+          "from_me": false,
+          "message_text": "Ena akupanga suggest kut mawa mix magets angoyaka",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 521,
+          "timestamp": 1773770711000,
+          "from_me": false,
+          "message_text": "Mawa ndekuti",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 522,
+          "timestamp": 1773823903000,
+          "from_me": false,
+          "message_text": "Am going to get the phone",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 523,
+          "timestamp": 1773824229000,
+          "from_me": false,
+          "message_text": "Kwapita munthu",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 544,
+          "timestamp": 1773945135000,
+          "from_me": false,
+          "message_text": "Good evening @all akut tikumane ku cafe at 21:00hrs",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 545,
+          "timestamp": 1773945162000,
+          "from_me": false,
+          "message_text": "Emergency meeting \n...agenda is the tomorrow's journey",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 546,
+          "timestamp": 1773945192000,
+          "from_me": false,
+          "message_text": "Sorry for short notice and the inconvenience",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 547,
+          "timestamp": 1773945200000,
+          "from_me": false,
+          "message_text": "But let's show up",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 548,
+          "timestamp": 1773946251000,
+          "from_me": false,
+          "message_text": "Akutiyo ndan?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 549,
+          "timestamp": 1773946561000,
+          "from_me": false,
+          "message_text": "At jesse nd moses kaya",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 550,
+          "timestamp": 1773946873000,
+          "from_me": false,
+          "message_text": "Side ya eco water",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 551,
+          "timestamp": 1773946880000,
+          "from_me": false,
+          "message_text": "Tafika kale",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 552,
+          "timestamp": 1773947328000,
+          "from_me": false,
+          "message_text": "At ku room kwa mozy",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 553,
+          "timestamp": 1773990564000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 9,
+          "media_path": "Media/WhatsApp Documents/Doc1.pdf111.pdf",
+          "status": 16
+        },
+        {
+          "message_id": 554,
+          "timestamp": 1774006345000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 555,
+          "timestamp": 1774006347000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0028.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 556,
+          "timestamp": 1774006348000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0029.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 557,
+          "timestamp": 1774006348000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0030.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 558,
+          "timestamp": 1774006352000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0031.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 559,
+          "timestamp": 1774006353000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0032.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 560,
+          "timestamp": 1774006390000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0033.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 561,
+          "timestamp": 1774006391000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0034.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 562,
+          "timestamp": 1774006391000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0035.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 563,
+          "timestamp": 1774006392000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0036.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 564,
+          "timestamp": 1774006393000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0037.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 565,
+          "timestamp": 1774006394000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0038.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 566,
+          "timestamp": 1774006400000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0039.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 567,
+          "timestamp": 1774006401000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0040.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 568,
+          "timestamp": 1774006402000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0041.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 569,
+          "timestamp": 1774006402000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0042.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 570,
+          "timestamp": 1774006403000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0043.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 571,
+          "timestamp": 1774006403000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0044.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 572,
+          "timestamp": 1774006406000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0045.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 573,
+          "timestamp": 1774006407000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0046.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 574,
+          "timestamp": 1774006408000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0047.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 575,
+          "timestamp": 1774006409000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0048.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 576,
+          "timestamp": 1774006409000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0049.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 577,
+          "timestamp": 1774006409000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0050.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 578,
+          "timestamp": 1774006410000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0051.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 579,
+          "timestamp": 1774006411000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0052.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 580,
+          "timestamp": 1774006411000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0053.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 581,
+          "timestamp": 1774006412000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0054.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 582,
+          "timestamp": 1774006413000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0055.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 583,
+          "timestamp": 1774006413000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0056.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 584,
+          "timestamp": 1774006414000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0057.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 585,
+          "timestamp": 1774006414000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0058.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 586,
+          "timestamp": 1774006415000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0059.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 587,
+          "timestamp": 1774006415000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0060.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 588,
+          "timestamp": 1774006416000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0061.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 589,
+          "timestamp": 1774006416000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0062.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 590,
+          "timestamp": 1774006417000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0063.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 591,
+          "timestamp": 1774006417000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0064.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 592,
+          "timestamp": 1774006418000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0065.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 593,
+          "timestamp": 1774006418000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0066.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 594,
+          "timestamp": 1774006419000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0067.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 595,
+          "timestamp": 1774006419000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0068.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 596,
+          "timestamp": 1774006420000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0069.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 597,
+          "timestamp": 1774006420000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0070.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 598,
+          "timestamp": 1774006421000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0071.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 599,
+          "timestamp": 1774006421000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0072.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 600,
+          "timestamp": 1774006422000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0073.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 601,
+          "timestamp": 1774006423000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0074.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 602,
+          "timestamp": 1774006423000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0075.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 603,
+          "timestamp": 1774006424000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0077.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 604,
+          "timestamp": 1774006426000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0079.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 605,
+          "timestamp": 1774006427000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0081.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 606,
+          "timestamp": 1774006431000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0083.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 607,
+          "timestamp": 1774006432000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0085.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 608,
+          "timestamp": 1774006432000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0087.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 609,
+          "timestamp": 1774006433000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0089.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 610,
+          "timestamp": 1774006433000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0091.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 611,
+          "timestamp": 1774006434000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0093.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 612,
+          "timestamp": 1774006434000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0095.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 613,
+          "timestamp": 1774006435000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0097.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 614,
+          "timestamp": 1774006436000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0099.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 615,
+          "timestamp": 1774006437000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0101.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 616,
+          "timestamp": 1774006438000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0103.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 617,
+          "timestamp": 1774006439000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0105.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 618,
+          "timestamp": 1774006441000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0107.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 619,
+          "timestamp": 1774006450000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0109.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 620,
+          "timestamp": 1774006450000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0111.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 621,
+          "timestamp": 1774006529000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0113.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 622,
+          "timestamp": 1774006530000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0115.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 623,
+          "timestamp": 1774006531000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0117.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 624,
+          "timestamp": 1774006531000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0119.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 625,
+          "timestamp": 1774006534000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0121.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 626,
+          "timestamp": 1774006535000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0123.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 627,
+          "timestamp": 1774006535000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0125.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 628,
+          "timestamp": 1774006546000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0127.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 629,
+          "timestamp": 1774006547000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0129.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 630,
+          "timestamp": 1774006547000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0131.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 631,
+          "timestamp": 1774006548000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0133.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 632,
+          "timestamp": 1774006548000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0135.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 633,
+          "timestamp": 1774006549000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0137.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 634,
+          "timestamp": 1774006549000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0139.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 635,
+          "timestamp": 1774006549000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0141.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 636,
+          "timestamp": 1774006550000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0143.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 637,
+          "timestamp": 1774006550000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0145.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 638,
+          "timestamp": 1774006551000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0147.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 639,
+          "timestamp": 1774006565000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0149.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 640,
+          "timestamp": 1774006566000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0151.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 641,
+          "timestamp": 1774006566000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0153.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 642,
+          "timestamp": 1774006566000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0155.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 643,
+          "timestamp": 1774006567000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0157.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 644,
+          "timestamp": 1774006567000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0159.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 645,
+          "timestamp": 1774006568000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0161.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 646,
+          "timestamp": 1774006568000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0163.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 647,
+          "timestamp": 1774006568000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0165.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 648,
+          "timestamp": 1774006569000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0167.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 649,
+          "timestamp": 1774006569000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0169.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 650,
+          "timestamp": 1774006570000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0171.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 651,
+          "timestamp": 1774006907000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 652,
+          "timestamp": 1774006908000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0172.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 653,
+          "timestamp": 1774006908000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0173.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 654,
+          "timestamp": 1774006909000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0174.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 655,
+          "timestamp": 1774006909000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0175.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 656,
+          "timestamp": 1774006910000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0176.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 657,
+          "timestamp": 1774006910000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0177.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 658,
+          "timestamp": 1774006911000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0178.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 659,
+          "timestamp": 1774006914000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0180.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 660,
+          "timestamp": 1774006915000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0182.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 661,
+          "timestamp": 1774006916000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0184.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 662,
+          "timestamp": 1774006916000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0186.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 663,
+          "timestamp": 1774006917000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0188.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 664,
+          "timestamp": 1774006918000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0190.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 665,
+          "timestamp": 1774006918000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0192.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 667,
+          "timestamp": 1774007420000,
+          "from_me": false,
+          "message_text": "Driver ati mufulumile @all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 666,
+          "timestamp": 1774007420000,
+          "from_me": false,
+          "message_text": "2 contacts",
+          "media_type": 14,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 668,
+          "timestamp": 1774007838000,
+          "from_me": false,
+          "message_text": "Where are we meeting u?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 669,
+          "timestamp": 1774008028000,
+          "from_me": false,
+          "message_text": "Tanyamuka",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 670,
+          "timestamp": 1774008112000,
+          "from_me": false,
+          "message_text": "The same place pa Sana. That's where tatenge achina upendo",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 671,
+          "timestamp": 1774008124000,
+          "from_me": false,
+          "message_text": "Where are you? @63372879994880",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 672,
+          "timestamp": 1774008144000,
+          "from_me": false,
+          "message_text": "Iweyo hope where did you go",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 673,
+          "timestamp": 1774008149000,
+          "from_me": false,
+          "message_text": "Anali akundidindira",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 674,
+          "timestamp": 1774008169000,
+          "from_me": false,
+          "message_text": "Tili pama robot pa",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 675,
+          "timestamp": 1774008177000,
+          "from_me": false,
+          "message_text": "Run",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 676,
+          "timestamp": 1774008289000,
+          "from_me": false,
+          "message_text": "Tikupita ku queens",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 677,
+          "timestamp": 1774008300000,
+          "from_me": false,
+          "message_text": "Come ku queens @63372879994880",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 678,
+          "timestamp": 1774008319000,
+          "from_me": false,
+          "message_text": "@63372879994880",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 679,
+          "timestamp": 1774037598000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 15,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0193.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 680,
+          "timestamp": 1774037645000,
+          "from_me": false,
+          "message_text": "Why deleting",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 681,
+          "timestamp": 1774037816000,
+          "from_me": false,
+          "message_text": "Nothing much I though its vacancy km.kahalangat anapanga kale application",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 682,
+          "timestamp": 1774037826000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0193.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 683,
+          "timestamp": 1774037879000,
+          "from_me": false,
+          "message_text": "YEAH, don't delete",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 684,
+          "timestamp": 1774118422000,
+          "from_me": false,
+          "message_text": "@192131201298513 progress on rooting the phone?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 685,
+          "timestamp": 1774118434000,
+          "from_me": false,
+          "message_text": "Also @⁨all⁩  who were writing notes at the meeting please send.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 686,
+          "timestamp": 1774118677000,
+          "from_me": false,
+          "message_text": "Will update you",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 689,
+          "timestamp": 1774198325000,
+          "from_me": false,
+          "message_text": "@all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 690,
+          "timestamp": 1774198522000,
+          "from_me": false,
+          "message_text": "@260133519138858 i think zil nd @194235735245044 enafe timalemba zot you can't understand",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 691,
+          "timestamp": 1774198764000,
+          "from_me": false,
+          "message_text": "Yeah it's with george",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 692,
+          "timestamp": 1774252345000,
+          "from_me": false,
+          "message_text": "Update?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 693,
+          "timestamp": 1774252361000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 9,
+          "media_path": "Media/WhatsApp Documents/MRA.pdf",
+          "status": 16
+        },
+        {
+          "message_id": 698,
+          "timestamp": 1774415748000,
+          "from_me": false,
+          "message_text": "@all",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0196.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 699,
+          "timestamp": 1774416062000,
+          "from_me": false,
+          "message_text": "Stephen? Ndani?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 700,
+          "timestamp": 1774416275000,
+          "from_me": false,
+          "message_text": "Nope the coordinator wa IT",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 701,
+          "timestamp": 1774416317000,
+          "from_me": false,
+          "message_text": "Alright alright bhobho",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 702,
+          "timestamp": 1774416338000,
+          "from_me": false,
+          "message_text": "Even in person",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 707,
+          "timestamp": 1774604142000,
+          "from_me": false,
+          "message_text": "Happy birthday @192131201298513",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 708,
+          "timestamp": 1774604202000,
+          "from_me": false,
+          "message_text": "Thank you bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 709,
+          "timestamp": 1774604254000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0200.webp",
+          "status": 16
+        },
+        {
+          "message_id": 710,
+          "timestamp": 1774604336000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0201.webp",
+          "status": 16
+        },
+        {
+          "message_id": 711,
+          "timestamp": 1774604589000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260330-WA0202.webp",
+          "status": 16
+        },
+        {
+          "message_id": 712,
+          "timestamp": 1774605184000,
+          "from_me": false,
+          "message_text": "Happy birthday @192131201298513 🥳🥳",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 713,
+          "timestamp": 1774605217000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260315-WA0009.webp",
+          "status": 16
+        },
+        {
+          "message_id": 728,
+          "timestamp": 1774814703000,
+          "from_me": false,
+          "message_text": "What\n Shall be plan @all  how will  we utilize this time coz if we can plan well it.will yield us",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 729,
+          "timestamp": 1774817652000,
+          "from_me": false,
+          "message_text": "Indeed bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 731,
+          "timestamp": 1774819256000,
+          "from_me": false,
+          "message_text": "And we have a problem as well",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 732,
+          "timestamp": 1774820016000,
+          "from_me": false,
+          "message_text": "Damn",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 733,
+          "timestamp": 1774820046000,
+          "from_me": false,
+          "message_text": "Phone down💀💀??",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 734,
+          "timestamp": 1774820199000,
+          "from_me": false,
+          "message_text": "No really, I was doing  a research on the second phone the company did make bootloader accessable but didn't upload the firmware and  TWRP image.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 735,
+          "timestamp": 1774820265000,
+          "from_me": false,
+          "message_text": "So I want you to do another research on firmware maybe I missed something, been at it for two",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 736,
+          "timestamp": 1774820373000,
+          "from_me": false,
+          "message_text": "Take note of the build number",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0203.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 737,
+          "timestamp": 1774820427000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0204.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 738,
+          "timestamp": 1774820468000,
+          "from_me": false,
+          "message_text": "Upendo, George and mzati , this is the task at hand",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 739,
+          "timestamp": 1774820655000,
+          "from_me": false,
+          "message_text": "I myself will go to meet up a  guy tomorrow, who has resources that are paid for, to manually pull the firmware from the phone like a copy but it's not promising that it will work , sent him the details of the phone, he is looking into it but let's all do the research,",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 740,
+          "timestamp": 1774820695000,
+          "from_me": false,
+          "message_text": "George we definitely need that SSD",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 741,
+          "timestamp": 1774820731000,
+          "from_me": false,
+          "message_text": "Mzati the flash drive is available?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 742,
+          "timestamp": 1774820776000,
+          "from_me": false,
+          "message_text": "And if it's ready install Caine os",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 743,
+          "timestamp": 1774821080000,
+          "from_me": false,
+          "message_text": "And python as well , now since it's data analysis a little bit of data presenting will be need like graphics and all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 744,
+          "timestamp": 1774821326000,
+          "from_me": false,
+          "message_text": "Now there are two ways of rooting a device \n1.using a boot image which is the original firmware of decives based on the build number.\n2. Find the TWRP image of the phone which enables the magisk to be installed \nThat's that",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 745,
+          "timestamp": 1774821340000,
+          "from_me": false,
+          "message_text": "Any questions ❓",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 746,
+          "timestamp": 1774821379000,
+          "from_me": false,
+          "message_text": "Yuh",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 747,
+          "timestamp": 1774821384000,
+          "from_me": false,
+          "message_text": "Think so",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 748,
+          "timestamp": 1774821444000,
+          "from_me": false,
+          "message_text": "Alright alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 749,
+          "timestamp": 1774822188000,
+          "from_me": false,
+          "message_text": "Documentation team, this morning send a document, explaining the pulling data with android studio emulator. \n\nAnd this will be based on windows on which hash value will be generated using MD5, or  any algorithm \n\nWhen it's shifted to Caine os using the same algorithm, it should bring the same hash value, this process is for integrity check.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 750,
+          "timestamp": 1774822346000,
+          "from_me": false,
+          "message_text": "In the Caine os, this is where the whole Database analysis will be happening.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 751,
+          "timestamp": 1774822475000,
+          "from_me": false,
+          "message_text": "George once you have installed it. Go through the analysis in Caine, there are some tools that have useful  features that we can adopt .",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 752,
+          "timestamp": 1774823172000,
+          "from_me": false,
+          "message_text": "partition the SSD, one location you will boot the Caine os and the other side used as writeable to keep the database artifacts, if you don't partition it will be impossible to keep the database artifacts as Caine os comes with some read-only and some other rules.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 759,
+          "timestamp": 1774856637000,
+          "from_me": false,
+          "message_text": "@194235735245044 u said u will provide  ssd  is it available for project?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 760,
+          "timestamp": 1774856638000,
+          "from_me": false,
+          "message_text": "My suggestion ma fans amene muli home I think wednesday mutakhala mwabwera tikambrane way to go",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 761,
+          "timestamp": 1774856727000,
+          "from_me": false,
+          "message_text": "Yeah @260133519138858 😂 come back",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 762,
+          "timestamp": 1774856814000,
+          "from_me": false,
+          "message_text": "Serous km we need to be working za hard 😂",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 763,
+          "timestamp": 1774857097000,
+          "from_me": false,
+          "message_text": "I think for today we do what Jesse has said then we start meeting tomorrow bwa??@97968690618591",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 764,
+          "timestamp": 1774857120000,
+          "from_me": false,
+          "message_text": "Akaz anu muwauze azibwera apa😂",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 765,
+          "timestamp": 1774857285000,
+          "from_me": false,
+          "message_text": "Ndawatumizr private jet 😂😂😂 kusava amakana kupita ku golden peacock",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 768,
+          "timestamp": 1774871479000,
+          "from_me": false,
+          "message_text": "Let just get home will will explain bhobho on the pulling out of the Database",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 769,
+          "timestamp": 1774871737000,
+          "from_me": false,
+          "message_text": "So what will be the consequence?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 770,
+          "timestamp": 1774871784000,
+          "from_me": false,
+          "message_text": "Meaning",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 771,
+          "timestamp": 1774871985000,
+          "from_me": false,
+          "message_text": "Documentation children am sure mwamva izi am still processing it to get it clearly but I hope u'll explain to me",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 772,
+          "timestamp": 1774872088000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 2,
+          "media_path": "Media/WhatsApp Voice Notes/202614/PTT-20260330-WA0205.opus",
+          "status": 16
+        },
+        {
+          "message_id": 773,
+          "timestamp": 1774873037000,
+          "from_me": false,
+          "message_text": "Ohoo",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 783,
+          "timestamp": 1774899447000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 2,
+          "media_path": "Media/WhatsApp Voice Notes/202614/PTT-20260331-WA0000.opus",
+          "status": 16
+        },
+        {
+          "message_id": 784,
+          "timestamp": 1774900326000,
+          "from_me": false,
+          "message_text": "Wednesday?😭😭 kuchokera ku Lilongwe? Eeeh tinamizana",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 785,
+          "timestamp": 1774900390000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 786,
+          "timestamp": 1774900429000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260331-WA0001.webp",
+          "status": 16
+        },
+        {
+          "message_id": 787,
+          "timestamp": 1774900803000,
+          "from_me": false,
+          "message_text": "Km project ikufunika",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 788,
+          "timestamp": 1774901033000,
+          "from_me": false,
+          "message_text": "Great idea",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 789,
+          "timestamp": 1774901101000,
+          "from_me": false,
+          "message_text": "Ife zotinamiza nzmene stikufunazo",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 790,
+          "timestamp": 1774901687000,
+          "from_me": false,
+          "message_text": "I know😪",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 815,
+          "timestamp": 1774985593000,
+          "from_me": false,
+          "message_text": "This is copying the database artifacts to SD card to accessed",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260331-WA0002.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 816,
+          "timestamp": 1774985593000,
+          "from_me": false,
+          "message_text": "This is pulling the database artifacts from the SD card to the computer",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260331-WA0003.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 818,
+          "timestamp": 1774989792000,
+          "from_me": false,
+          "message_text": "Documentation team, you can make a document based on those screenshot yeah",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 828,
+          "timestamp": 1775037090000,
+          "from_me": false,
+          "message_text": "In the evening, meeting, I myself will make phone call to be part of the meeting not WhatsApp call but a normal call",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 829,
+          "timestamp": 1775037166000,
+          "from_me": false,
+          "message_text": "Nde kuti the guys on campus will meet and will be there but though a phone call",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 830,
+          "timestamp": 1775037393000,
+          "from_me": false,
+          "message_text": "Agenda for the meeting \n1. To discuss the new idea about the Linux distro \n2. The hardware platform needed SSD/flash drive \n3. The date line to implement a prototype and see how it works and changes to be made\n4. Documentation update \n \nAnd if anything that requires group discussion towards the project",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 831,
+          "timestamp": 1775037490000,
+          "from_me": false,
+          "message_text": "The Time should be at 8:30 tonight.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 832,
+          "timestamp": 1775039066000,
+          "from_me": false,
+          "message_text": "@all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 833,
+          "timestamp": 1775039179000,
+          "from_me": false,
+          "message_text": "Ndili ku phalombetu",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 834,
+          "timestamp": 1775039191000,
+          "from_me": false,
+          "message_text": "Wayambapo",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 835,
+          "timestamp": 1775039192000,
+          "from_me": false,
+          "message_text": "Call",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 836,
+          "timestamp": 1775039266000,
+          "from_me": false,
+          "message_text": "What???",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 837,
+          "timestamp": 1775039301000,
+          "from_me": false,
+          "message_text": "U will join call",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 838,
+          "timestamp": 1775039514000,
+          "from_me": false,
+          "message_text": "😂😂😂",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 843,
+          "timestamp": 1775150649000,
+          "from_me": false,
+          "message_text": "Mzati any updates",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 844,
+          "timestamp": 1775151451000,
+          "from_me": false,
+          "message_text": "@247085324619853",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 845,
+          "timestamp": 1775458714000,
+          "from_me": false,
+          "message_text": "@all  I think we all see these dates and our progress  ..... Dissertation singalembedwe without product , tyen tichiteponi kanthu please lets resume our meetings guys",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0000.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 846,
+          "timestamp": 1775459109000,
+          "from_me": false,
+          "message_text": "Yes by end of today..",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 865,
+          "timestamp": 1775551969000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0001.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 864,
+          "timestamp": 1775551969000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 866,
+          "timestamp": 1775551970000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0002.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 867,
+          "timestamp": 1775551971000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0003.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 868,
+          "timestamp": 1775551971000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0004.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 869,
+          "timestamp": 1775551972000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0004.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 870,
+          "timestamp": 1775551972000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0005.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 871,
+          "timestamp": 1775551973000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0006.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 872,
+          "timestamp": 1775551973000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0006.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 873,
+          "timestamp": 1775551974000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0006.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 874,
+          "timestamp": 1775552152000,
+          "from_me": false,
+          "message_text": "Guys pakufunika.kugula ssd casing lets contribute kutbztheke project ipangidwe implement  caine akukana we are opting to install ubuntu on ssd of which we need enclosure or kuika mu pc to archive process its urgent according to time frame 25k ya case plus we need o include transport to get think for further information we can meet to understand",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 875,
+          "timestamp": 1775552208000,
+          "from_me": false,
+          "message_text": "Just get a connector",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 876,
+          "timestamp": 1775552232000,
+          "from_me": false,
+          "message_text": "It's cheaper",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 877,
+          "timestamp": 1775552249000,
+          "from_me": false,
+          "message_text": "From where ?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 878,
+          "timestamp": 1775552380000,
+          "from_me": false,
+          "message_text": "Help plz ?",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 879,
+          "timestamp": 1775552486000,
+          "from_me": false,
+          "message_text": "Guys need feedback fast",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 880,
+          "timestamp": 1775552735000,
+          "from_me": false,
+          "message_text": "@all  anyone with connector plz , ma usb flash satheka  space👨🏽",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 881,
+          "timestamp": 1775552820000,
+          "from_me": false,
+          "message_text": "🤔",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 887,
+          "timestamp": 1775559613000,
+          "from_me": false,
+          "message_text": "We need to meet guys Ntchito yachuluka lets all be available @all",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 888,
+          "timestamp": 1775559984000,
+          "from_me": false,
+          "message_text": "7 pm lower cafe am saying 7 bar osat kumabweetmra 7:10 pleas @all  see you there",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 889,
+          "timestamp": 1775560351000,
+          "from_me": false,
+          "message_text": "Agendas : resource limitations (storage issue), demo for what have been done.... Planning for what to be done next , reports ,",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 890,
+          "timestamp": 1775560352000,
+          "from_me": false,
+          "message_text": "Is the time on group time table or personally selected? If its personally selected its better to ask or negotiate with others too.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 891,
+          "timestamp": 1775560376000,
+          "from_me": false,
+          "message_text": "Anyway, am OK with any time bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 892,
+          "timestamp": 1775560481000,
+          "from_me": false,
+          "message_text": "The time is okay",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 893,
+          "timestamp": 1775560488000,
+          "from_me": false,
+          "message_text": "Ase person chifukwa anthu smukuyankha no negotiations time limits us ase  ,,,, if we can check in short we haven't done something tangible its now to be pressurised with time if we still tolerate this spirit anthu stimaliza ichi",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 894,
+          "timestamp": 1775560527000,
+          "from_me": false,
+          "message_text": "I'll be late by 30min, have a meeting from 6 to 7:30pm",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 895,
+          "timestamp": 1775560577000,
+          "from_me": false,
+          "message_text": "Ort... Cool",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 896,
+          "timestamp": 1775560626000,
+          "from_me": false,
+          "message_text": "Its fine vuto our thing  stkumakhala serous  nde we may end up in vain",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 905,
+          "timestamp": 1775580348000,
+          "from_me": false,
+          "message_text": "Will be 30 minutes late to the meeting",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 906,
+          "timestamp": 1775581981000,
+          "from_me": false,
+          "message_text": "Mwakhala pati",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 907,
+          "timestamp": 1775582004000,
+          "from_me": false,
+          "message_text": "Mbali ya genset",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 911,
+          "timestamp": 1775586384000,
+          "from_me": false,
+          "message_text": "Nice — now you’re thinking like someone building a real forensic toolkit 🔥\nLet’s design this properly based on your constraints.\n\n\n---\n\n⚠️ First reality check (important)\n\n❌ 30GB USB → NOT enough\n\n✅ 128GB USB → GOOD (minimum)\n\n⭐ Best → External SSD (fast + reliable)\n\n\n👉 Why? Your toolkit will include:\n\nUbuntu system\n\nAndroid emulator\n\nForensic tools\n\nEvidence storage\n\n\n30GB will fail quickly.\n\n\n---\n\n✅ Your Target Setup (Recommended)\n\n💻 Hardware baseline\n\nRAM: 4GB (minimum) ✔️\n\nUSB: 128GB\n\nCPU: Must support virtualization (for emulator)\n\n\n\n---\n\n🧱 System Architecture (what you should build)\n\n🔹 Option A (BEST)\n\n👉 Full Ubuntu installed on USB (portable OS)\n\nPartition layout (128GB USB)\n\n/ (root): 40GB\n\n/home: 60GB\n\nevidence: 20GB (separate folder or partition)\n\n\n\n---\n\n🔧 Core Tools You MUST install\n\n1. Android access tools\n\nADB (Android Debug Bridge)\n\nFastboot\n\n\n👉 Used to:\n\nPull WhatsApp databases\n\nAccess device storage\n\n\n\n---\n\n2. Database analysis\n\nSQLite tools:\n\nsqlitebrowser\n\nsqlite3\n\n\n\n👉 WhatsApp stores chats in:\n\nmsgstore.db\nwa.db\n\n\n---\n\n3. Python forensic stack\n\nInstall:\n\nPython 3\n\nLibraries:\n\npandas\n\nsqlite3\n\ncryptography\n\n\n\n👉 Use for:\n\nParsing WhatsApp databases\n\nDecryption scripts\n\n\n\n---\n\n4. Forensic frameworks\n\nAutopsy\n\nThe Sleuth Kit\n\n\n👉 Useful for:\n\nFile recovery\n\nDeleted data analysis\n\n\n\n---\n\n5. File recovery tools\n\nforemost\n\ntestdisk\n\nphotorec\n\n\n👉 For:\n\nRecovering deleted media\n\n\n\n---\n\n📱 WhatsApp Forensics (your core goal)\n\n🔍 Data you want\n\n1. Chats\n\nFrom:\n\n/data/data/com.whatsapp/databases/msgstore.db\n\n👉 Contains:\n\nMessages\n\nTimestamps\n\nContacts\n\n\n\n---\n\n2. Media\n\nFrom:\n\n/WhatsApp/Media/\n\n👉 Includes:\n\nImages\n\nVideos\n\nVoice notes\n\n\n\n---\n\n3. Deleted Data (IMPORTANT)\n\nMethods:\n\n1. Old backups:\n\n\n\nmsgstore-YYYY-MM-DD.db.crypt12\n\n2. File carving (with photorec)\n\n\n3. Database recovery:\n\n\n\nParse deleted SQLite records\n\n\n\n---\n\n🔐 WhatsApp Decryption (critical part)\n\nWhatsApp DB is encrypted (.crypt12)\n\nYou need:\n\nKey file:\n\n\n/data/data/com.whatsapp/files/key\n\n👉 Requires:\n\nRooted phone OR\n\nADB backup exploit (limited on newer Android)\n\n\n\n---\n\n🤖 About Android Emulator (be careful)\n\n⚠️ On 4GB RAM:\n\n❌ Android Studio Emulator = too heavy\n\n✅ Use lighter option:\n\nGenymotion (better performance)\n\n\n\n👉 Or: 👉 Skip emulator and use real device (BEST for forensics)\n\n\n---\n\n📁 Suggested Folder Structure\n\nOn your USB:\n\n/forensics-toolkit/\n ├── tools/\n ├── scripts/\n ├── evidence/\n ├── recovered/\n ├── reports/\n\n\n---\n\n⚡ Performance Tips (VERY IMPORTANT)\n\nUse USB 3.0 port\n\nDisable unnecessary services\n\nUse XFCE desktop (lightweight Ubuntu)\n\n\n👉 Install:\n\nsudo apt install xubuntu-desktop\n\n\n---\n\n🧠 Pro forensic practices\n\nAlways work on copies of data\n\nKeep original evidence untouched\n\nLog every action (important for reports)\n\n\n\n---\n\n🚀 Final Recommendation\n\n👉 Do THIS:\n\n1. Get 128GB USB\n\n\n2. Install full Ubuntu (not live)\n\n\n3. Use lightweight desktop (XFCE)\n\n\n4. Install:\n\nADB\n\nSQLite tools\n\nAutopsy\n\nRecovery tools\n\n\n\n5. Build Python scripts for WhatsApp parsing\n\n\n\n\n---\n\n💬 Next step (I can help you deeper)\n\nIf you want, I can:\n\n✅ Give you:\n\nExact installation commands\n\nWhatsApp decryption scripts\n\nFull toolkit setup script\n\nUI dashboard idea for your project\n\n\nJust tell me: 👉 “Build full toolkit guide”",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 917,
+          "timestamp": 1775587842000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0007.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 924,
+          "timestamp": 1775588035000,
+          "from_me": false,
+          "message_text": "0889921381 alinafe bondo",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 925,
+          "timestamp": 1775588045000,
+          "from_me": false,
+          "message_text": "Send the money there with proof",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 929,
+          "timestamp": 1775588285000,
+          "from_me": false,
+          "message_text": "Paying back 3,125 each",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 950,
+          "timestamp": 1775636232000,
+          "from_me": false,
+          "message_text": "The databases zip folder will drop this afternoon",
+          "media_type": 0,
+          "media_path": null,
+          "status": 17
+        },
+        {
+          "message_id": 952,
+          "timestamp": 1775637700000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 953,
+          "timestamp": 1775637701000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0005.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 954,
+          "timestamp": 1775637701000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0007.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 955,
+          "timestamp": 1775637702000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0003.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 956,
+          "timestamp": 1775637702000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0001.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 957,
+          "timestamp": 1775637703000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260408-WA0010.jpg",
+          "status": 4
+        },
+        {
+          "message_id": 958,
+          "timestamp": 1775637703000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260408-WA0016.jpg",
+          "status": 4
+        },
+        {
+          "message_id": 959,
+          "timestamp": 1775637704000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260408-WA0013.jpg",
+          "status": 4
+        },
+        {
+          "message_id": 960,
+          "timestamp": 1775637704000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260408-WA0019.jpg",
+          "status": 4
+        },
+        {
+          "message_id": 961,
+          "timestamp": 1775637824000,
+          "from_me": true,
+          "message_text": "Ati 48hrs",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        }
+      ]
+    },
+    {
+      "jid": "38942619508855@lid",
+      "display_name": "",
+      "is_group": false,
+      "participants": [],
+      "message_count": 33,
+      "last_message_timestamp": 951,
+      "messages": [
+        {
+          "message_id": 882,
+          "timestamp": 1774955594313,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 883,
+          "timestamp": 1774955594522,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 885,
+          "timestamp": 1774955920760,
+          "from_me": true,
+          "message_text": "Hello. Boss will get back to you",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 915,
+          "timestamp": 1774963440389,
+          "from_me": true,
+          "message_text": "Got it",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 920,
+          "timestamp": 1774963601418,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0007.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 926,
+          "timestamp": 1774963737077,
+          "from_me": true,
+          "message_text": "Jesse mbekeani 0994143967 / 0894358545",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 927,
+          "timestamp": 1774963765974,
+          "from_me": true,
+          "message_text": "AT MUST",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 930,
+          "timestamp": 1774963939269,
+          "from_me": true,
+          "message_text": "Yeah",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 933,
+          "timestamp": 1774964044163,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0008.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 935,
+          "timestamp": 1774964288995,
+          "from_me": true,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 884,
+          "timestamp": 1775556165000,
+          "from_me": false,
+          "message_text": "Hello",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 886,
+          "timestamp": 1775556918000,
+          "from_me": false,
+          "message_text": "Okay",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 913,
+          "timestamp": 1775587533000,
+          "from_me": false,
+          "message_text": "1070000284318",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 914,
+          "timestamp": 1775587539000,
+          "from_me": false,
+          "message_text": "Alex Kapalasa",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 916,
+          "timestamp": 1775587807000,
+          "from_me": false,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 919,
+          "timestamp": 1775587938000,
+          "from_me": false,
+          "message_text": "Yafika boss",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 921,
+          "timestamp": 1775587963000,
+          "from_me": false,
+          "message_text": "Give u details phone number,you name and where you want to receive the parcel",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 922,
+          "timestamp": 1775587981000,
+          "from_me": false,
+          "message_text": "Yafika",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 923,
+          "timestamp": 1775587983000,
+          "from_me": false,
+          "message_text": ".",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 928,
+          "timestamp": 1775588178000,
+          "from_me": false,
+          "message_text": "Thyolo eti",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 931,
+          "timestamp": 1775588307000,
+          "from_me": false,
+          "message_text": "Ok will call u mamawa",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 934,
+          "timestamp": 1775588552000,
+          "from_me": false,
+          "message_text": "Eya agwila that what I use",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 940,
+          "timestamp": 1775632481000,
+          "from_me": false,
+          "message_text": "Ati 48hrs",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 941,
+          "timestamp": 1775632505000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 942,
+          "timestamp": 1775632506000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0000.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 943,
+          "timestamp": 1775632507000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0002.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 944,
+          "timestamp": 1775632508000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0004.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 945,
+          "timestamp": 1775632508000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260408-WA0006.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 946,
+          "timestamp": 1775632513000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260408-WA0009.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 947,
+          "timestamp": 1775632516000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260408-WA0012.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 948,
+          "timestamp": 1775632517000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260408-WA0015.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 949,
+          "timestamp": 1775632517000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260408-WA0018.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 951,
+          "timestamp": 1775637675000,
+          "from_me": true,
+          "message_text": "Alright thanks",
+          "media_type": 0,
+          "media_path": null,
+          "status": 4
+        }
+      ]
+    },
+    {
+      "jid": "192131201298513@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 21,
+      "last_message_timestamp": 932,
+      "messages": [
+        {
+          "message_id": 9,
+          "timestamp": 1772903406000,
+          "from_me": false,
+          "message_text": "The story",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 10,
+          "timestamp": 1772903410000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 8,
+          "timestamp": 1772904028000,
+          "from_me": true,
+          "message_text": "what story",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 7,
+          "timestamp": 1772904065000,
+          "from_me": false,
+          "message_text": "Of you",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 6,
+          "timestamp": 1772904076000,
+          "from_me": true,
+          "message_text": "huh 😅😅",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 5,
+          "timestamp": 1772904097000,
+          "from_me": false,
+          "message_text": "Come on bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 4,
+          "timestamp": 1772904113000,
+          "from_me": true,
+          "message_text": "you crazy gee",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 3,
+          "timestamp": 1772904128000,
+          "from_me": false,
+          "message_text": "Forget about it",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 2,
+          "timestamp": 1772904144000,
+          "from_me": true,
+          "message_text": "alright alright bhobho",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 374,
+          "timestamp": 1773322100000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260315-WA0009.webp",
+          "status": 16
+        },
+        {
+          "message_id": 376,
+          "timestamp": 1773332809000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0010.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 375,
+          "timestamp": 1773332809000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 377,
+          "timestamp": 1773332810000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0011.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 378,
+          "timestamp": 1773332811000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0012.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 379,
+          "timestamp": 1773332811000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0013.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 380,
+          "timestamp": 1773332812000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0014.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 381,
+          "timestamp": 1773332813000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0015.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 382,
+          "timestamp": 1773333143000,
+          "from_me": true,
+          "message_text": "707694",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 448,
+          "timestamp": 1773612955000,
+          "from_me": true,
+          "message_text": "Yeah",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 918,
+          "timestamp": 1775587920000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0007.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 932,
+          "timestamp": 1775588347000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260407-WA0008.jpg",
+          "status": 0
+        }
+      ]
+    },
+    {
+      "jid": "147644450091207@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 4,
+      "last_message_timestamp": 817,
+      "messages": [
+        {
+          "message_id": 716,
+          "timestamp": 1774768668000,
+          "from_me": false,
+          "message_text": "Hi",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 714,
+          "timestamp": 1774883844221,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 715,
+          "timestamp": 1774883844634,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 817,
+          "timestamp": 1774918493390,
+          "from_me": true,
+          "message_text": "wassup bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        }
+      ]
+    },
+    {
+      "jid": "25765827596540@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 59,
+      "last_message_timestamp": 706,
+      "messages": [
+        {
+          "message_id": 384,
+          "timestamp": 1773333981000,
+          "from_me": true,
+          "message_text": "Here",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 385,
+          "timestamp": 1773333982000,
+          "from_me": false,
+          "message_text": "Thank you.. We'll be back in a few minutes",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 386,
+          "timestamp": 1773334036000,
+          "from_me": false,
+          "message_text": "Hello I'",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 387,
+          "timestamp": 1773334036000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 389,
+          "timestamp": 1773334037000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0016.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 390,
+          "timestamp": 1773334037000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0017.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 388,
+          "timestamp": 1773334037000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 391,
+          "timestamp": 1773334038000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0018.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 392,
+          "timestamp": 1773334038000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 393,
+          "timestamp": 1773334038000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 394,
+          "timestamp": 1773334039000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 395,
+          "timestamp": 1773334039000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 396,
+          "timestamp": 1773334039000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 397,
+          "timestamp": 1773334040000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 398,
+          "timestamp": 1773334040000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 399,
+          "timestamp": 1773334040000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0018.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 400,
+          "timestamp": 1773334041000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 401,
+          "timestamp": 1773334045000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0016.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 402,
+          "timestamp": 1773334045000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 403,
+          "timestamp": 1773334046000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0019.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 404,
+          "timestamp": 1773334046000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0020.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 405,
+          "timestamp": 1773334046000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0021.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 406,
+          "timestamp": 1773334047000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0017.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 407,
+          "timestamp": 1773334047000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0022.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 408,
+          "timestamp": 1773334048000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0023.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 409,
+          "timestamp": 1773334048000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0024.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 420,
+          "timestamp": 1773578307000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0025.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 421,
+          "timestamp": 1773578642000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260315-WA0026.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 383,
+          "timestamp": 1773583974632,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 524,
+          "timestamp": 1773851515000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 525,
+          "timestamp": 1773851520000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0009.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 526,
+          "timestamp": 1773851520000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0010.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 527,
+          "timestamp": 1773851521000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0011.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 528,
+          "timestamp": 1773851521000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0012.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 529,
+          "timestamp": 1773851521000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0013.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 530,
+          "timestamp": 1773851522000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0014.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 531,
+          "timestamp": 1773851522000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0015.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 532,
+          "timestamp": 1773851522000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0016.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 533,
+          "timestamp": 1773851523000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0017.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 534,
+          "timestamp": 1773851523000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0018.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 535,
+          "timestamp": 1773851523000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0019.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 536,
+          "timestamp": 1773851524000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0020.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 537,
+          "timestamp": 1773852083000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0021.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 538,
+          "timestamp": 1773852084000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0022.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 539,
+          "timestamp": 1773852084000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0023.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 540,
+          "timestamp": 1773852084000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0024.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 541,
+          "timestamp": 1773852372000,
+          "from_me": false,
+          "message_text": "426577",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 542,
+          "timestamp": 1773852641000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Private/IMG-20260330-WA0025.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 543,
+          "timestamp": 1773852642000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0027.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 687,
+          "timestamp": 1774118790000,
+          "from_me": false,
+          "message_text": "👍",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260330-WA0194.jpg",
+          "status": 0
+        },
+        {
+          "message_id": 688,
+          "timestamp": 1774118791000,
+          "from_me": false,
+          "message_text": "👍",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 694,
+          "timestamp": 1774262558000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260330-WA0195.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 695,
+          "timestamp": 1774296760000,
+          "from_me": true,
+          "message_text": "Pelvis\nSternum\nMandible\nFemur\nSkull \nSinuses",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 696,
+          "timestamp": 1774296786000,
+          "from_me": true,
+          "message_text": "Temlodamandbular joint",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 697,
+          "timestamp": 1774317228000,
+          "from_me": false,
+          "message_text": "Hop joint",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 703,
+          "timestamp": 1774428205000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 704,
+          "timestamp": 1774428206000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260330-WA0197.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 705,
+          "timestamp": 1774428206000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260330-WA0198.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 706,
+          "timestamp": 1774428206000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260330-WA0199.jpg",
+          "status": 13
+        }
+      ]
+    },
+    {
+      "jid": "13135550002@s.whatsapp.net",
+      "display_name": "",
+      "is_group": false,
+      "participants": [],
+      "message_count": 5,
+      "last_message_timestamp": 477,
+      "messages": [
+        {
+          "message_id": 474,
+          "timestamp": 1773684759000,
+          "from_me": true,
+          "message_text": "I want to understand a new concept",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 476,
+          "timestamp": 1773684762000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 110,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 475,
+          "timestamp": 1773684833000,
+          "from_me": true,
+          "message_text": "Building cyber security company",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 477,
+          "timestamp": 1773684834000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 110,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 473,
+          "timestamp": 1774883692762,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "0@s.whatsapp.net",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 4,
+      "last_message_timestamp": 463,
+      "messages": [
+        {
+          "message_id": 39,
+          "timestamp": 1772474173943,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 40,
+          "timestamp": 1773048974000,
+          "from_me": false,
+          "message_text": "*Edit your sent messages*\nMade a small mistake typing that message? No big deal.\n\nEasily edit messages for up to 15 minutes after sending them, whether you want to undo an error or change up an emoji.",
+          "media_type": 28,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 433,
+          "timestamp": 1773606520000,
+          "from_me": false,
+          "message_text": "*Make decisions fun with polls*\nCreate a poll for anything, whether it’s picking what’s for dinner or your favorite character from a movie.\n\nJust tap the attachment icon, then Poll. Enter your question and possible answers and send.",
+          "media_type": 28,
+          "media_path": "Media/WhatsApp Video/Private/null-20260315-WA0028.mp4",
+          "status": 0
+        },
+        {
+          "message_id": 463,
+          "timestamp": 1774883666000,
+          "from_me": false,
+          "message_text": "*Capture every emotion with voice messages*\nWhether it’s a long story, a serenade, or even a squeal—share every detail through voice messages.\n\nHere’s how:\n1. Press and hold the microphone icon to record and release to send.\n2. Swipe up while holding the microphone icon to go hands-free.\n3. Now you have more controls—pause, preview, or set to disappear after it’s opened. ",
+          "media_type": 28,
+          "media_path": "Media/WhatsApp Video/Private/null-20260330-WA0001.mp4",
+          "status": 0
+        }
+      ]
+    },
+    {
+      "jid": "247085324619853@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 4,
+      "last_message_timestamp": 426,
+      "messages": [
+        {
+          "message_id": 248,
+          "timestamp": 1772474230699,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 424,
+          "timestamp": 1773145666000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 90,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 425,
+          "timestamp": 1773145668000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260315-WA0027.webp",
+          "status": 17
+        },
+        {
+          "message_id": 426,
+          "timestamp": 1773145669000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 90,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "233564717187076@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 33,
+      "last_message_timestamp": 367,
+      "messages": [
+        {
+          "message_id": 34,
+          "timestamp": 1772464868998,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 35,
+          "timestamp": 1772464869364,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 287,
+          "timestamp": 1772474668667,
+          "from_me": true,
+          "message_text": "Deal",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 36,
+          "timestamp": 1772986895000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 37,
+          "timestamp": 1772987161000,
+          "from_me": true,
+          "message_text": "So how drugs do you need",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 38,
+          "timestamp": 1772987183000,
+          "from_me": false,
+          "message_text": "???",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 41,
+          "timestamp": 1772987273000,
+          "from_me": true,
+          "message_text": "Many",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 42,
+          "timestamp": 1772987524000,
+          "from_me": false,
+          "message_text": "This",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260309-WA0000.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 43,
+          "timestamp": 1772987610000,
+          "from_me": true,
+          "message_text": "I got this,",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 249,
+          "timestamp": 1772987634000,
+          "from_me": true,
+          "message_text": "How how much kgs",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 251,
+          "timestamp": 1772987687000,
+          "from_me": false,
+          "message_text": "2kg for a start",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 252,
+          "timestamp": 1772987701000,
+          "from_me": false,
+          "message_text": "Good stuff only",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 253,
+          "timestamp": 1772987779000,
+          "from_me": true,
+          "message_text": "Don't worry my stuff is high grade,  the kind that makes you feel like you in heaven",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 255,
+          "timestamp": 1772988378000,
+          "from_me": true,
+          "message_text": "See how high this guy is,  probably thinking of 30 years from now",
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260309-WA0001.jpg",
+          "status": 13
+        },
+        {
+          "message_id": 256,
+          "timestamp": 1772988858000,
+          "from_me": false,
+          "message_text": "Great let's meet same location at 13:00hrs",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 261,
+          "timestamp": 1772995013000,
+          "from_me": true,
+          "message_text": "You got it",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 262,
+          "timestamp": 1772995014000,
+          "from_me": true,
+          "message_text": "Tell your friends that am the plug",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 268,
+          "timestamp": 1773036913000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260309-WA0003.webp",
+          "status": 0
+        },
+        {
+          "message_id": 269,
+          "timestamp": 1773036921000,
+          "from_me": false,
+          "message_text": "Good stuff indeed",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 270,
+          "timestamp": 1773036936000,
+          "from_me": false,
+          "message_text": "My package should be delivered on time",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 271,
+          "timestamp": 1773036949000,
+          "from_me": false,
+          "message_text": "Only if i will get discount",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 299,
+          "timestamp": 1773056926000,
+          "from_me": false,
+          "message_text": "You have given me fake stuff",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 300,
+          "timestamp": 1773056941000,
+          "from_me": false,
+          "message_text": "I will deal with you man",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 301,
+          "timestamp": 1773056958000,
+          "from_me": false,
+          "message_text": "I will chop you in peaces",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 313,
+          "timestamp": 1773090657000,
+          "from_me": true,
+          "message_text": "Wait will also got guns here",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 314,
+          "timestamp": 1773117683000,
+          "from_me": false,
+          "message_text": "Even more",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 315,
+          "timestamp": 1773117696000,
+          "from_me": false,
+          "message_text": "You promised good stuff",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 316,
+          "timestamp": 1773117722000,
+          "from_me": false,
+          "message_text": "But you are a crook",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 343,
+          "timestamp": 1773183457000,
+          "from_me": true,
+          "message_text": "You don't say",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 344,
+          "timestamp": 1773183485000,
+          "from_me": true,
+          "message_text": "Well let's meet up tomorrow to discuss",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 345,
+          "timestamp": 1773208630000,
+          "from_me": false,
+          "message_text": "You better get ready of my real stuff",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 346,
+          "timestamp": 1773208640000,
+          "from_me": false,
+          "message_text": "Ain't playing with you no more",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 367,
+          "timestamp": 1773308902000,
+          "from_me": true,
+          "message_text": "I sent the package",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        }
+      ]
+    },
+    {
+      "jid": "63372879994880@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 16,
+      "last_message_timestamp": 327,
+      "messages": [
+        {
+          "message_id": 297,
+          "timestamp": 1773056077000,
+          "from_me": false,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 298,
+          "timestamp": 1773056087000,
+          "from_me": false,
+          "message_text": "We'll do that boss",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 312,
+          "timestamp": 1773090580000,
+          "from_me": true,
+          "message_text": "Chills",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 295,
+          "timestamp": 1773092301642,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 296,
+          "timestamp": 1773092302308,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 317,
+          "timestamp": 1773125340000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 318,
+          "timestamp": 1773125341000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0000.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 320,
+          "timestamp": 1773125345000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0001.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 319,
+          "timestamp": 1773125345000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 321,
+          "timestamp": 1773125346000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0002.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 322,
+          "timestamp": 1773125347000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 323,
+          "timestamp": 1773125361000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 324,
+          "timestamp": 1773125361000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 326,
+          "timestamp": 1773125362000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260315-WA0003.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 325,
+          "timestamp": 1773125362000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 327,
+          "timestamp": 1773125363000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        }
+      ]
+    },
+    {
+      "jid": "97968690618591@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 22,
+      "last_message_timestamp": 308,
+      "messages": [
+        {
+          "message_id": 15,
+          "timestamp": 1772464787475,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 16,
+          "timestamp": 1772464789582,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 288,
+          "timestamp": 1772474699029,
+          "from_me": true,
+          "message_text": "Alright",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 17,
+          "timestamp": 1772940128000,
+          "from_me": false,
+          "message_text": "Hello",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 18,
+          "timestamp": 1772940132000,
+          "from_me": false,
+          "message_text": "Mbeke",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 19,
+          "timestamp": 1772940151000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 15,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 20,
+          "timestamp": 1772940218000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 15,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 26,
+          "timestamp": 1772940293000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 90,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 27,
+          "timestamp": 1772955088000,
+          "from_me": true,
+          "message_text": "morning bro",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 28,
+          "timestamp": 1772970327000,
+          "from_me": true,
+          "message_text": "Bro needs weed",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 29,
+          "timestamp": 1772979227000,
+          "from_me": false,
+          "message_text": "Yoah",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 30,
+          "timestamp": 1772979251000,
+          "from_me": false,
+          "message_text": "500k bag 👛😂",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 31,
+          "timestamp": 1772985614000,
+          "from_me": true,
+          "message_text": "Yeah fast mix hope is need to it kwambiri",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 32,
+          "timestamp": 1772985666000,
+          "from_me": false,
+          "message_text": "Deal send.location",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 33,
+          "timestamp": 1772985861000,
+          "from_me": true,
+          "message_text": "Limbe market",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 254,
+          "timestamp": 1772987933000,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/Sent/IMG-20260309-WA0001.jpg",
+          "status": 5
+        },
+        {
+          "message_id": 260,
+          "timestamp": 1772991866000,
+          "from_me": false,
+          "message_text": "😭😅😅",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 263,
+          "timestamp": 1772995144000,
+          "from_me": true,
+          "message_text": "High grade weed",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 264,
+          "timestamp": 1772995166000,
+          "from_me": false,
+          "message_text": "🥺 its expensive",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 265,
+          "timestamp": 1772995324000,
+          "from_me": true,
+          "message_text": "We allow to pay little by little",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 266,
+          "timestamp": 1773000476000,
+          "from_me": false,
+          "message_text": "Bro give to Upendo",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 308,
+          "timestamp": 1773082194000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260309-WA0007.webp",
+          "status": 16
+        }
+      ]
+    },
+    {
+      "jid": "260133519138858@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 14,
+      "last_message_timestamp": 286,
+      "messages": [
+        {
+          "message_id": 257,
+          "timestamp": 1772474243769,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 286,
+          "timestamp": 1772474637224,
+          "from_me": true,
+          "message_text": "😅😅😅",
+          "media_type": 0,
+          "media_path": null,
+          "status": 5
+        },
+        {
+          "message_id": 258,
+          "timestamp": 1772989154000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260309-WA0002.webp",
+          "status": 16
+        },
+        {
+          "message_id": 275,
+          "timestamp": 1772989176000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 90,
+          "media_path": null,
+          "status": 6
+        },
+        {
+          "message_id": 276,
+          "timestamp": 1772989631000,
+          "from_me": false,
+          "message_text": "Hola soy Dora can you say grahhh",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 277,
+          "timestamp": 1772994924000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 99,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 278,
+          "timestamp": 1772994925000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260309-WA0004.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 279,
+          "timestamp": 1772994925000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": "Media/WhatsApp Images/IMG-20260309-WA0005.jpg",
+          "status": 16
+        },
+        {
+          "message_id": 280,
+          "timestamp": 1772995112000,
+          "from_me": true,
+          "message_text": "Grahhh what",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 281,
+          "timestamp": 1772995179000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 20,
+          "media_path": "Media/WhatsApp Stickers/STK-20260309-WA0006.webp",
+          "status": 16
+        },
+        {
+          "message_id": 282,
+          "timestamp": 1772995190000,
+          "from_me": false,
+          "message_text": "I guess it's working🤣",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 283,
+          "timestamp": 1772995279000,
+          "from_me": true,
+          "message_text": "Come to the Cafe",
+          "media_type": 0,
+          "media_path": null,
+          "status": 13
+        },
+        {
+          "message_id": 284,
+          "timestamp": 1772995547000,
+          "from_me": false,
+          "message_text": "I'm coming",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 285,
+          "timestamp": 1773040995000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 42,
+          "media_path": null,
+          "status": 10
+        }
+      ]
+    },
+    {
+      "jid": "6408829432048@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 0,
+      "last_message_timestamp": null,
+      "messages": []
+    },
+    {
+      "jid": "status@broadcast",
+      "display_name": "",
+      "is_group": false,
+      "participants": [],
+      "message_count": 44,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 780,
+          "timestamp": 1774895716000,
+          "from_me": false,
+          "message_text": "📌",
+          "media_type": 3,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 792,
+          "timestamp": 1774934992000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 793,
+          "timestamp": 1774934994000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 795,
+          "timestamp": 1774946187000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 796,
+          "timestamp": 1774948123000,
+          "from_me": false,
+          "message_text": "Lero Ku Behold kuli phwando, birthday ya fazala",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 797,
+          "timestamp": 1774948131000,
+          "from_me": false,
+          "message_text": "Happy birthday a MC, Mr Mbewe\nTo more years of living for the glory of God & being a blessing",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 798,
+          "timestamp": 1774948635000,
+          "from_me": false,
+          "message_text": "Now I understand kukhala Music Coordinator doesn't just come😂😂kuyimba anayamba pakanyengo🙌",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 803,
+          "timestamp": 1774954728000,
+          "from_me": false,
+          "message_text": "It's collateral based",
+          "media_type": 0,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 804,
+          "timestamp": 1774954896000,
+          "from_me": false,
+          "message_text": "🔥",
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 805,
+          "timestamp": 1774955625000,
+          "from_me": false,
+          "message_text": "Geographical reasons maCalls akvuta kuno..\nSo let's possibly try to use the internet for communication.",
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 806,
+          "timestamp": 1774956232000,
+          "from_me": false,
+          "message_text": "1K n'zothekanso😂💔",
+          "media_type": 1,
+          "media_path": null,
+          "status": 16
+        },
+        {
+          "message_id": 807,
+          "timestamp": 1774967347000,
+          "from_me": false,
+          "message_text": "Nthawi ikuyandikira let's be preparing",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 809,
+          "timestamp": 1774968909000,
+          "from_me": false,
+          "message_text": "I have trust issues because people have loyalty issues. 😎",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 813,
+          "timestamp": 1774977923000,
+          "from_me": false,
+          "message_text": "Bro don't know Mwian Currence🥲😂💔",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 819,
+          "timestamp": 1775024385000,
+          "from_me": false,
+          "message_text": "Happy birthday Margs😝🥳🥳❤️",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 820,
+          "timestamp": 1775024935000,
+          "from_me": false,
+          "message_text": "❤️😍",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 823,
+          "timestamp": 1775035862000,
+          "from_me": false,
+          "message_text": "Yesterday's lesson was so..... \nSomething is off",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 824,
+          "timestamp": 1775035895000,
+          "from_me": false,
+          "message_text": "😪",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 825,
+          "timestamp": 1775036096000,
+          "from_me": false,
+          "message_text": "That research paper which tells us we need to take milk for calcium also says \"milk is species specific\"\n\nThere's a need to Think, something is not straight",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 826,
+          "timestamp": 1775036161000,
+          "from_me": false,
+          "message_text": "😪😪",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 827,
+          "timestamp": 1775036524000,
+          "from_me": false,
+          "message_text": "If we would THINK, we wouldn't have been eating some of the things we eat\nWe wouldn't have been drinking some of the things we drink\nWe wouldn't have been watching some of the things we watch\nWe wouldn't have been listening to some of the things we listen to\nWe wouldn't have been dating some of the people we date\nIf we would THINK we would have been careful with our lives",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 839,
+          "timestamp": 1775048730000,
+          "from_me": false,
+          "message_text": "👍🤗",
+          "media_type": 3,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 840,
+          "timestamp": 1775063202000,
+          "from_me": false,
+          "message_text": "till tomorrow",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 842,
+          "timestamp": 1775125689000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 847,
+          "timestamp": 1775471249000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 3,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 848,
+          "timestamp": 1775471462000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 851,
+          "timestamp": 1775476098000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 852,
+          "timestamp": 1775480778000,
+          "from_me": false,
+          "message_text": "*Finally Credit Is Back*\n\n🥳",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 856,
+          "timestamp": 1775482197000,
+          "from_me": false,
+          "message_text": "Direct Bundles Are Back",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 862,
+          "timestamp": 1775540365000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 863,
+          "timestamp": 1775551901000,
+          "from_me": false,
+          "message_text": "Available 24 hours",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 898,
+          "timestamp": 1775567105000,
+          "from_me": false,
+          "message_text": "Balance Renewed 🔥",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 899,
+          "timestamp": 1775567106000,
+          "from_me": false,
+          "message_text": "Inbox anytime",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 901,
+          "timestamp": 1775572408000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 902,
+          "timestamp": 1775572410000,
+          "from_me": false,
+          "message_text": null,
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 903,
+          "timestamp": 1775575939000,
+          "from_me": false,
+          "message_text": "Wen he's a new client😅👍",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 904,
+          "timestamp": 1775576873000,
+          "from_me": false,
+          "message_text": "😂💔",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 908,
+          "timestamp": 1775583596000,
+          "from_me": false,
+          "message_text": "CSS_BIT4🔥",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 909,
+          "timestamp": 1775583837000,
+          "from_me": false,
+          "message_text": "1,2,3...",
+          "media_type": 3,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 910,
+          "timestamp": 1775583976000,
+          "from_me": false,
+          "message_text": "I did it all for free😔😔",
+          "media_type": 3,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 912,
+          "timestamp": 1775587461000,
+          "from_me": false,
+          "message_text": "😁  what I gained from CU trip",
+          "media_type": 3,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 937,
+          "timestamp": 1775602569000,
+          "from_me": false,
+          "message_text": "For the first time 🔥.\nProud of Y'all❤️",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 939,
+          "timestamp": 1775627704000,
+          "from_me": false,
+          "message_text": "🎉🎉🎉",
+          "media_type": 1,
+          "media_path": null,
+          "status": 0
+        },
+        {
+          "message_id": 962,
+          "timestamp": 1775645314000,
+          "from_me": false,
+          "message_text": "Occupied\n\nWill be back soon.",
+          "media_type": 0,
+          "media_path": null,
+          "status": 0
+        }
+      ]
+    },
+    {
+      "jid": "194235735245044@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 355,
+          "timestamp": 1773583962580,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "107413290152164@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 434,
+          "timestamp": 1773606547723,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "270321449967658@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 435,
+          "timestamp": 1773606547805,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "184048072847539@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 436,
+          "timestamp": 1773606547919,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "147167557730480@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 437,
+          "timestamp": 1773606548020,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "31822134177921@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 438,
+          "timestamp": 1773606548117,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "109839963390194@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 439,
+          "timestamp": 1773606549653,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "18644553719935@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 440,
+          "timestamp": 1773606550989,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "271081608888574@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 441,
+          "timestamp": 1773606551035,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "126770422493294@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 442,
+          "timestamp": 1773606551086,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "3453438972019@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 443,
+          "timestamp": 1773606551157,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "70253014954194@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 444,
+          "timestamp": 1773606551245,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "6408175132847@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 445,
+          "timestamp": 1773606551468,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "101056923103409@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 446,
+          "timestamp": 1773606551544,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "247720862335021@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 447,
+          "timestamp": 1773606552428,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    },
+    {
+      "jid": "867051314767696@bot",
+      "display_name": "",
+      "is_group": false,
+      "participants": [],
+      "message_count": 0,
+      "last_message_timestamp": null,
+      "messages": []
+    },
+    {
+      "jid": "280495975882921@lid",
+      "display_name": null,
+      "is_group": false,
+      "participants": [],
+      "message_count": 1,
+      "last_message_timestamp": null,
+      "messages": [
+        {
+          "message_id": 479,
+          "timestamp": 1774883702217,
+          "from_me": true,
+          "message_text": null,
+          "media_type": 7,
+          "media_path": null,
+          "status": 6
+        }
+      ]
+    }
+  ],
+  "call_logs": []
+}

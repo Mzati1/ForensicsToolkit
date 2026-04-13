@@ -67,6 +67,31 @@ Run the complete workflow (acquire -> decrypt -> parse -> report):
 python main.py full --source file --input /path/to/data --key key --output ./output --format pdf
 ```
 
+### Case Workflow (Recommended)
+
+Run a single modular command that builds a full forensic case package:
+- acquisition copy
+- hash verification
+- chain-of-custody trail
+- audit logs
+- reports and case manifest
+
+```bash
+python main.py case \
+  --case-id CASE001 \
+  --examiner "Analyst Name" \
+  --source android_adb \
+  --output ./output \
+  --format all
+```
+
+For file-based sources:
+```bash
+python main.py case --case-id CASE002 --examiner "Analyst Name" --source file --input /path/to/data --output ./output
+```
+
+By default, the case workflow enforces a software write-blocker policy for ADB sessions.
+
 ## Structure
 
 - `src/`: Source code modules.

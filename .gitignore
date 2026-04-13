@@ -62,6 +62,17 @@ temp/
 htmlcov/
 .pytest_cache/
 .tox/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Notebook and Python tool metadata
+.ipynb_checkpoints/
+.python-version
+
+# Runtime artifacts
+*.tmp
+*.bak
 
 # OS files
 Thumbs.db
